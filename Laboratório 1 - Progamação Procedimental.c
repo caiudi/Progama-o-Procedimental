@@ -16,4 +16,6 @@ int main(){
     scanf("%f", &x);
     printf("Valor de x: %f", x);
     return 0;
-    
+}
+ 
+//Exercício 3
