@@ -12,7 +12,7 @@ int main(){
 
 #include <stdio.h> 
 int main(){
-    int x;
+    float x;
     scanf("%f", &x);
     printf("Valor de x: %f", x);
     return 0;
