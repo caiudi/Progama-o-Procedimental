@@ -249,4 +249,29 @@ int main(){
 
 //Exercício 20
 
-    
+#include <stdio.h>
+int main(){
+   float l;
+   float k;
+   printf ("Digite um valor em quilogramas para converte-lo em libras");
+   scanf ("%f", &k);
+   l = k/0.45;
+   printf ("%f", l);
+   return 0;
+}
+
+//Exercício 21
+
+#include <stdio.h>
+int main(){
+   float l;
+   float k;
+   printf ("Digite um valor em libras para converte-lo em quilogramas");
+   scanf ("%f", &l);
+   k = l*0.45;
+   printf ("%f", k);
+   return 0;
+}
+
+//Exercício 22
+
