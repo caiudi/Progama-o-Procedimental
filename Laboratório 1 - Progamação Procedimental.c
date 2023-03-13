@@ -223,6 +223,30 @@ int main(){
 
 //Exercício 18
 
+#include <stdio.h>
+int main(){
+   float l;
+   float m;
+   printf ("Digite um valor em metros cúbicos para converte-lo em litros");
+   scanf ("%f", &m);
+   l = 1000*m;
+   printf ("%f", l);
+   return 0;
+}
 
+//Exercício 19
+
+#include <stdio.h>
+int main(){
+   float l;
+   float m;
+   printf ("Digite um valor em litros para converte-lo em metros cubicos");
+   scanf ("%f", &l);
+   m = l /1000;
+   printf ("%f", m);
+   return 0;
+}
+
+//Exercício 20
 
     
