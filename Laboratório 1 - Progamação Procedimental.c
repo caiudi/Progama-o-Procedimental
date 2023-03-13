@@ -275,3 +275,28 @@ int main(){
 
 //Exercício 22
 
+#include <stdio.h>
+int main(){
+   float j;
+   float m;
+   printf ("Digite um valor em jardas para converte-lo em metros");
+   scanf ("%f", &j);
+   m = 0.91*j;
+   printf ("%f", m);
+   return 0;
+}
+
+//Exercício 23
+
+#include <stdio.h>
+int main(){
+   float j;
+   float m;
+   printf ("Digite um valor em metros para converte-lo em jardas");
+   scanf ("%f", &m);
+   j = m/0.91;
+   printf ("%f", j);
+   return 0;
+}
+
+//Exercício 24
