@@ -35,6 +35,15 @@ int main(){
     S = x + y + z;
     printf ("O valor da Soma e %i", S);
     return 0;
-    
+}
+
+//Exercício 4
+
+#include <stdio.h>
+int main(){
+
+
+
+
 
     
