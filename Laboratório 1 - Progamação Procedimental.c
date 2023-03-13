@@ -132,15 +132,43 @@ int main(){
 
 #include <stdio.h>
 int main(){
-    float k;
-    float m;
-    printf ("Digite a velocidade em m/s para converte-la em km/h");
-    scanf ("%f", &m);
-    m = k*3.6;
-    printf ("%f", k);
-    return 0;
- }
+   float k;
+   float m;
+   printf ("Digite a velocidade em m/s para converte-la em km/h");
+   scanf ("%f", &m);
+   k = m*3.6;
+   printf ("%f", k);
+   return 0;
+}
 
+//Exercício 12
+
+#include <stdio.h>
+int main(){
+   float k;
+   float m;
+   printf ("Digite um valor em milhas para converte-lo em quilometros");
+   scanf ("%f", &m);
+   k = 1.61*m;
+   printf ("%f", k);
+   return 0;
+}
+
+//Exercício 13
+
+#include <stdio.h>
+int main(){
+   float k;
+   float m;
+   printf ("Digite um valor em quilometros para converte-lo em milhas");
+   scanf ("%f", &k);
+   m = k/1.61;
+   printf ("%f", m);
+   return 0;
+}
+
+//Exercício 14
+ 
 
 
 
