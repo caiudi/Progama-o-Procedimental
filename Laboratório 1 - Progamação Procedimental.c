@@ -41,6 +41,18 @@ int main(){
 
 #include <stdio.h>
 int main(){
+    float x;
+    float y;
+    printf ("Digite o valor para calcular o quadrado do mesmo.");
+    scanf ("%f", &x);
+    y = x * x;
+    printf ("O valor do quadrado e %f", y);
+    return 0;
+}
+
+//Exercício 5
+
+
 
 
 
