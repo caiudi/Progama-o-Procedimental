@@ -45,7 +45,7 @@ int main(){
     float y;
     printf ("Digite o valor para calcular o quadrado do mesmo.");
     scanf ("%f", &x);
-    y = x * x;
+    y = x^2;
     printf ("O valor do quadrado e %f", y);
     return 0;
 }
