@@ -89,6 +89,34 @@ int main(){
     return 0;
 }
 
+//Exercício 8
+
+#include <stdio.h>
+int main(){
+    float c;
+    float k;
+    printf ("Digite o valor em Kelvin para converte lo em Celcius");
+    scanf ("%f", &k);
+    c = k-273.15;
+    printf ("%f", c);
+    return 0;
+}
+
+//Exercício 9
+
+#include <stdio.h>
+int main(){
+    float c;
+    float k;
+    printf ("Digite o valor em Celcius para converte lo em Kelvin");
+    scanf ("%f", &c);
+    k = c + 273.15;
+    printf ("%f", k);
+    return 0;
+}
+
+
+
 
 
 
