@@ -136,7 +136,7 @@ int main(){
     float m;
     printf ("Digite a velocidade em m/s para converte-la em km/h");
     scanf ("%f", &m);
-    m = k*3.6.
+    m = k*3.6;
     printf ("%f", k);
     return 0;
  }
