@@ -169,6 +169,34 @@ int main(){
 
 //Exercício 14
  
+#include <stdio.h>
+#define PI 3,141592
+int main(){
+   float g;
+   float r;
+   printf ("Digite um valor em graus para converte-lo em radianos");
+   scanf ("%f", &g);
+   r = g*PI/180;
+   printf ("%f", r);
+   return 0;
+}
+
+//Exercício 15
+
+#include <stdio.h>
+#define PI 3,141592
+int main(){
+   float g;
+   float r;
+   printf ("Digite um valor em radianos para converte-lo em graus");
+   scanf ("%f", &r);
+  g = r*180/PI;
+   printf ("%f", g);
+   return 0;
+}
+
+//Exercício 16
+
 
 
 
