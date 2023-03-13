@@ -300,3 +300,55 @@ int main(){
 }
 
 //Exercício 24
+
+#include <stdio.h>
+int main(){
+   float a;
+   float m;
+   printf ("Digite um valor em metros quadrados para converte-lo em acres");
+   scanf ("%f", &m);
+   a = m*0.000247;
+   printf ("%f", a);
+   return 0;
+}
+
+//Exercício 25
+
+#include <stdio.h>
+int main(){
+   float a;
+   float m;
+   printf ("Digite um valor em acres para converte-lo em metros quadrados");
+   scanf ("%f", &a);
+   m = a*4048.58;
+   printf ("%f", m);
+   return 0;
+}
+
+//Exercício 26
+
+#include <stdio.h>
+int main(){
+   float h;
+   float m;
+   printf ("Digite um valor em metros quadrados para converte-lo em hectares");
+   scanf ("%f", &m);
+   h = m*0.0001;
+   printf ("%f", h);
+   return 0;
+}
+
+//Exercício 27
+
+#include <stdio.h>
+int main(){
+   float h;
+   float m;
+   printf ("Digite um valor em hectares para converte-lo em metros quadrados");
+   scanf ("%f", &h);
+   m = h*10000;
+   printf ("%f", m);
+   return 0;
+}
+
+//Exercício 28
