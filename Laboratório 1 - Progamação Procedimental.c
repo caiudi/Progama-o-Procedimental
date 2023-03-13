@@ -197,7 +197,31 @@ int main(){
 
 //Exercício 16
 
+#include <stdio.h>
+int main(){
+   float c;
+   float p;
+   printf ("Digite um valor em polegadas para converte-lo em centimetros");
+   scanf ("%f", &p);
+   c = p*2.54;
+   printf ("%f", c);
+   return 0;
+}
 
+//Exercício 17
+
+#include <stdio.h>
+int main(){
+   float c;
+   float p;
+   printf ("Digite um valor em centimetros para converte-lo em polegadas");
+   scanf ("%f", &c);
+   p = c/2.54;
+   printf ("%f", p);
+   return 0;
+}
+
+//Exercício 18
 
 
 
