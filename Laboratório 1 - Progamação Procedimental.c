@@ -65,7 +65,29 @@ int main(){
 
 //Exercício 6
 
+#include <stdio.h>
+int main(){
+    float c;
+    float f;
+    printf ("Digite o valor em Celcius para converte lo em Fahrenheit");
+    scanf ("%f", &c);
+    f = c*(9.0/5.0)+32.0;
+    printf ("%f", f);
+    return 0;
+}
 
+//Exercício 7
+
+#include <stdio.h>
+int main(){
+    float c;
+    float f;
+    printf ("Digite o valor em Fahrenheit para converte lo em Celcius");
+    scanf ("%f", &f);
+    c = 5.0*(f- 32.0)/9.0;
+    printf ("%f", c);
+    return 0;
+}
 
 
 
