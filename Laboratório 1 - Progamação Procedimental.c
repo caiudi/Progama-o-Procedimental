@@ -387,4 +387,19 @@ return 0;
 
 //Exercício 31
 
+#include <stdio.h> 
+int main(){
+   int x;
+   int a;
+   int s;
+   printf ("Digite um numero para mostrar o seu sucessor e seu antecessor");
+   scanf ("%d", &x);
+   a = x - 1;
+   s = x + 1;
+   printf ("%d ", a);
+   printf ("%d", s);
+   return 0;
+    }
+
+//Exercício 32
 
