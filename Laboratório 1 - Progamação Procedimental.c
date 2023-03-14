@@ -385,3 +385,6 @@ return 0;
 
 //Exercício 30
 
+//Exercício 31
+
+
