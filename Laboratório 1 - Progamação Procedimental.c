@@ -352,3 +352,18 @@ int main(){
 }
 
 //Exercício 28
+
+#include <stdio.h> 
+int main(){   
+float x;
+float y;
+float z;
+float S;
+printf ("Digite tres valores para calcular a soma do quadrado dos mesmos");
+scanf ("%f %f %f", &x, &y, &z);
+S = (x*x)+(y*y)+(z*z);
+printf ("%f", S);
+}
+ 
+//Exercício 29
+
