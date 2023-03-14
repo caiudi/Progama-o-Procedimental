@@ -369,3 +369,19 @@ int main(){
  
 //Exercício 29
 
+#include <stdio.h> 
+int main(){   
+float w;
+float x;
+float y;
+float z;
+float M;
+printf ("Digite quatro notas para calcular a media aritimetica das mesmas");
+scanf ("%f %f %f %f", &w, &x, &y, &z);
+M = (w+x+y+z)/2;
+printf ("%f", M);
+return 0;
+}
+
+//Exercício 30
+
