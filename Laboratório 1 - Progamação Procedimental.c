@@ -385,6 +385,19 @@ return 0;
 
 //Exercício 30
 
+#include <stdio.h>
+int main(){
+  float r;
+  float d;
+  float C;
+  printf ("Digite um valor em reais para converte lo em dolares");
+  scanf ("%f", &r);
+  printf ("Digite a cotacao atual do dolar no Brasil");
+  scanf ("%f", &C);
+  d = r/C;
+  printf ("%f", d);
+   }
+
 //Exercício 31
 
 #include <stdio.h> 
