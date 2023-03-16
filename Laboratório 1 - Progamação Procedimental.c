@@ -416,3 +416,19 @@ int main(){
 
 //Exercício 32
 
+#include <stdio.h>
+int main(){
+ int x;
+ int antecessor; 
+ int sucessor;
+ int SOMA;
+ printf ("Digite um valor para calcular a soma do sucessor de seu triplo com o antecessor de seu dobro");
+ scanf ("%i", &x);
+sucessor = x*3 + 1;
+antecessor = x*2 -1;
+SOMA = sucessor + antecessor;
+printf ("%i", SOMA);
+}
+
+//Exercício 33
+
