@@ -433,18 +433,6 @@ printf ("%i", SOMA);
 //Exercício 33
 
 #include <stdio.h>
-int main(){
-   float x;
-   float a;
-   printf ("Digite o valor do lado de um quadrado para calcular a sua area");
-   scanf ("%f", &x);
-   a = x*x;
-   printf ("%f", a);
-    }
-
-//Exercício 34 
-
-#include <stdio.h>
 #include <math.h>
 int main(){
    float x;
@@ -454,6 +442,9 @@ int main(){
    a = pow(x,2);
    printf ("%f", a);
     }
+
+//Exercício 34 
+
 
 //Exercício 35
 
