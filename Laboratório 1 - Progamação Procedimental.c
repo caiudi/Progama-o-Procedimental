@@ -475,4 +475,31 @@ int main(){
 
 //Exercício 36
 
+#include <stdio.h>
+#define PI 3,141592
+#include <math.h>
+int main(){
+   float h, r, v;
+   printf ("Digite a altura e o raio de um cilindro circular para calcular o seu volume");
+   scanf ("%f %f", &h, &r);
+   v = PI*pow(r,2)*h;
+   printf ("%f", v);
+   return 0;
+     }
+
+//Exercício 37
+
+#include <stdio.h>
+#include <math.h>
+int main(){
+   float v, v2;
+   printf ("Digite o valor do produto para mostra-lo com o desconto de 12 por cento");
+   scanf ("%f", &v);
+   v2 = v*0,88;
+   printf ("%f", v2);
+   return 0;
+     }
+   
+//Exercício 38
+
 
