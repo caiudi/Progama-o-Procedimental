@@ -428,6 +428,7 @@ sucessor = x*3 + 1;
 antecessor = x*2 -1;
 SOMA = sucessor + antecessor;
 printf ("%i", SOMA);
+    return 0;
 }
 
 //Exercício 33
@@ -441,12 +442,37 @@ int main(){
    scanf ("%f", &x);
    a = pow(x,2);
    printf ("%f", a);
+    return 0;
     }
 
 //Exercício 34 
 
+#include <stdio.h>
+#define PI 3,141592
+#include <math.h>
+int main(){
+   float r, a;
+   printf ("Digite o valor do raio do circulo para calcular a sua area");
+   scanf ("%f", &r);
+   a = PI*pow(r,2);
+   printf ("%f", a);
+   return 0;
+    }
 
 //Exercício 35
 
+#include <stdio.h>
+#define PI 3,141592
+#include <math.h>
+int main(){
+   float a, b, h;
+   printf ("Digite o valor de dois catetos para calcular a hipotenusa de um triangulo retangulo");
+   scanf ("%f %f", &a, &b);
+   h = sqrt(pow(a,2) + pow(b,2));
+   printf ("%f", h);
+   return 0;
+    }
+
+//Exercício 36
 
 
