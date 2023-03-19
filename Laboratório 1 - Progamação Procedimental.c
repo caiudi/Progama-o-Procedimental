@@ -448,7 +448,7 @@ int main(){
 //Exercício 34 
 
 #include <stdio.h>
-#define PI 3,141592
+#define PI 3.141592
 #include <math.h>
 int main(){
    float r, a;
@@ -462,7 +462,6 @@ int main(){
 //Exercício 35
 
 #include <stdio.h>
-#define PI 3,141592
 #include <math.h>
 int main(){
    float a, b, h;
@@ -476,7 +475,7 @@ int main(){
 //Exercício 36
 
 #include <stdio.h>
-#define PI 3,141592
+#define PI 3.141592
 #include <math.h>
 int main(){
    float h, r, v;
@@ -495,7 +494,7 @@ int main(){
    float v, v2;
    printf ("Digite o valor do produto para mostra-lo com o desconto de 12 por cento");
    scanf ("%f", &v);
-   v2 = v*0,88;
+   v2 = v*0.88;
    printf ("%f", v2);
    return 0;
      }
@@ -507,7 +506,7 @@ int main(){
    float v, a;
    printf ("Digite o valor do salario para mostra lo com aumento de 25 por cento");
    scanf ("%f", &v);
-   a = v*1,25;
+   a = v*1.25;
    printf ("%f", a);
    return 0;
      }
@@ -517,9 +516,9 @@ int main(){
 #include <stdio.h>
 int main(){
    float imp = 780.000, v1, v2, v3;
-   v1 = 0,46*imp;
-   v2 = 0,32*imp;
-   v3 = 0,22*imp;
+   v1 = 0.46*imp;
+   v2 = 0.32*imp;
+   v3 = 0.22*imp;
    printf ("primeiro lugar = %f", v1);
    printf ("segundo lugar = %f", v2);
    printf ("terceiro lugar = %f", v3);
