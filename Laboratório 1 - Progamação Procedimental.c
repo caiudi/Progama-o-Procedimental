@@ -502,4 +502,29 @@ int main(){
    
 //Exercício 38
 
+#include <stdio.h>
+int main(){
+   float v, a;
+   printf ("Digite o valor do salario para mostra lo com aumento de 25 por cento");
+   scanf ("%f", &v);
+   a = v*1,25;
+   printf ("%f", a);
+   return 0;
+     }
+
+//Exercício 39
+
+#include <stdio.h>
+int main(){
+   float imp = 780.000, v1, v2, v3;
+   v1 = 0,46*imp;
+   v2 = 0,32*imp;
+   v3 = 0,22*imp;
+   printf ("primeiro lugar = %f", v1);
+   printf ("segundo lugar = %f", v2);
+   printf ("terceiro lugar = %f", v3);
+   return 0;
+    }
+
+//Exercício 40
 
