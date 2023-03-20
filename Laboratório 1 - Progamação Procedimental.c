@@ -584,4 +584,18 @@ int main(){
     
 //Exercício 44 
 
+#include <stdio.h>
+int main(){
+    float degraus, objetivo, resultado;
+   printf ("Digite o valor da altura do degraus e a altura que se deseja alcancar");
+   scanf ("%f %f", &degraus, &objetivo);
+   resultado = objetivo/degraus;
+   printf ("numero de degraus = %f", resultado);
+   return 0;
+}
+
+//Exercício 45
+
+
+
 
