@@ -540,3 +540,17 @@ int main(){
    
 //Exercício 41
 
+#include <stdio.h>
+int main(){
+   float valor, trabalhado, total1, total2;
+   printf ("Digite o valor da hora de trabalho e as horas trabalhadas.");
+   scanf ("%f %f", &valor, &trabalhado);
+   total1 = valor*trabalhado;
+   total2 = total1*1.10;
+   printf ("%f", total2);
+   return 0;
+}
+
+//Exercício 42
+
+
