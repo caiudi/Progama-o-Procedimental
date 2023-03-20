@@ -553,4 +553,17 @@ int main(){
 
 //Exercício 42
 
+#include <stdio.h>
+int main(){
+   float salariob, total1, total2;
+   printf ("Digite o valor do salario base.");
+   scanf ("%f", &salariob);
+   total1 = salariob*1.05;
+   total2 = total1*0.93;
+   printf ("%f", total2);
+   return 0;
+}
+
+//Exercício 43
+
 
