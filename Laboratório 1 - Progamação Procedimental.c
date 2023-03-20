@@ -527,3 +527,16 @@ int main(){
 
 //Exercício 40
 
+#include <stdio.h>
+int main(){
+   float dias, total, ql;
+   printf ("Digite o numero de dias trabalhados pelo encanador");
+   scanf ("%f", &dias);
+   total = dias*30;
+   ql = total*0.92;
+   printf ("%f", ql);
+   return 0;
+     }
+   
+//Exercício 41
+
