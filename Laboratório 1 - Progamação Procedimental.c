@@ -566,4 +566,22 @@ int main(){
 
 //Exercício 43
 
+#include <stdio.h>
+int main(){
+   float valort, desconto, parcela, comissao1, comissao2;
+   printf ("Digite um valor");
+   scanf ("%f", &valort);
+   desconto = valort*0.90;
+   printf ("com desconto = %f \n", desconto);
+   parcela = valort/3;
+   printf ("parcelamento sem juros = %f \n", parcela);
+   comissao1 = desconto*0.05;
+   printf ("valor da comissao a vista = %f \n", comissao1);
+   comissao2 = valort*0.05;
+   printf ("valor da comissao parcelado = %f \n", comissao2);
+   return 0;
+}
+    
+//Exercício 44 
+
 
