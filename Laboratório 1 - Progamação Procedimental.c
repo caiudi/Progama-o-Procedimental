@@ -596,6 +596,18 @@ int main(){
 
 //Exercício 45
 
+#include <stdio.h>
+int main(){
+   char letra, LETRA;
+   printf ("Digite uma letra MAIUSCULA");
+   scanf ("%c", &LETRA);
+   letra = LETRA + 32;
+   printf ("%c", letra);
+   return 0;
+}
+
+//Exercício 46
+
 
 
 
