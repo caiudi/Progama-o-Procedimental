@@ -608,6 +608,29 @@ int main(){
 
 //Exercício 46
 
+//Exercício 47
+
+//Exercício 48
+
+//Exercício 49
+
+//Exercício 50
+
+#include <stdio.h>
+#include <stdlib.h>
+int 
+main()
+{
+   int idade, ano1, ano2;
+   printf ("Digite a sua idade e o ano atual");
+   scanf ("%i %i", &idade, &ano1);
+   ano2 = ano1-idade;
+   printf ("Seu ano de nascimento e = %i", ano2);
+   return 0;
+}
+
+//Exercício 51
+
 
 
 
