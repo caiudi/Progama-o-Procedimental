@@ -610,6 +610,22 @@ int main(){
 
 //Exercício 47
 
+#include <stdio.h>
+#include <stdlib.h>
+int 
+main()
+{
+   int numero, milhar, centena, dezena, unidade;
+   printf ("Digite um numero inteiro de 4 digitos");
+   scanf ("%i", &numero);
+   milhar=numero/1000;
+   centena=numero/100-10*milhar;
+   dezena=numero/10-100*milhar-10*centena;
+   unidade=numero/1-1000*milhar-100*centena-10*dezena;
+   printf ("%i\n%i\n%i\n%i\n", milhar, centena, dezena, unidade);
+   return 0;
+}
+
 //Exercício 48
 
 //Exercício 49
