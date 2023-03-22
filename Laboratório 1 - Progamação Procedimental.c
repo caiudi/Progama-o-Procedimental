@@ -628,6 +628,23 @@ main()
 
 //Exercício 48
 
+#include <stdio.h>
+#include <stdlib.h>
+int 
+main()
+{
+   int entrada, h, m, s, resto;
+   printf ("Digite uma quantidade de segundos");
+   scanf ("%i", &entrada);
+   h = entrada/3600;
+   resto = entrada%3600;
+   m = resto/60;
+   s = resto%60;
+   printf ("horas = %i, minutos = %i, segundos = %i", h, m, s);
+   return 0;
+ }
+
+
 //Exercício 49
 
 //Exercício 50
