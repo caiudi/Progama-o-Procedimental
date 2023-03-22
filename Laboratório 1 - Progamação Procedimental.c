@@ -608,6 +608,24 @@ int main(){
 
 //Exercício 46
 
+#include <stdio.h>
+#include <stdlib.h>
+int 
+main()
+{
+   int numero, x, y, z;
+   printf ("Digite um numero inteiro de 3 digitos");
+   scanf ("%i", &numero);
+   x = numero%10;
+   numero = numero/10;
+   y = numero%10;
+   numero = numero/10;
+   z = numero%10;
+   numero = numero/10;
+   printf ("%i%i%i", x, y, z);
+   return 0;
+}
+
 //Exercício 47
 
 #include <stdio.h>
