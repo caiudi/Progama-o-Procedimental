@@ -665,6 +665,28 @@ main()
 
 //Exercício 49
 
+#include <stdio.h>
+int main(){ 
+int h1, m1, s1, h2, m2, s2, h3, m3, s3, tempo, duracao;
+    printf("Digite as horas iniciais");
+    scanf("%i", &h1);
+    printf("Digite os minutos iniciais:");
+    scanf("%i", &m1);
+    printf("Digite os segundos de iniciais:");
+    scanf("%i", &s1);
+    printf("Digite a duracao do experimento em segundos:");
+    scanf("%i", &duracao);
+    tempo=duracao%3600; 
+    h2=duracao/3600; 
+    m2=tempo/60; 
+    s2=tempo%60; 
+    s3=(s2+s1)%60;
+    m3=(m2+m1+(s2+s1)/60)%60;
+    h3=(h2+h1+(m2+m1+(s2+s1)/60)/60)%24;
+    printf("O experimento acabou as %i %i %i", h3, m3, s3);
+    return 0;
+}
+
 //Exercício 50
 
 #include <stdio.h>
