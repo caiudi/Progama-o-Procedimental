@@ -110,6 +110,36 @@ main()
 
 //Exercício 5
  
+#include <stdio.h>
+#include <math.h>
+int
+main()
+{ 
+  int x;
+  
+  printf ("Digite um numero inteiro");
+  scanf ("%i", &x);
+  
+  printf ("\n");
+  if(x%2==0){
+    
+    printf("O numero %i e par", x);
+    return 0;
+    
+  }
+  else{
+    
+    printf("O numero %i e impar", x);
+    return 0;
+    
+  }
+}
+
+//Exercicio 6
+  
+  
+
+  
 
 
   
