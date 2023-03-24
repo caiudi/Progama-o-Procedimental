@@ -219,6 +219,38 @@ main()
 
 //Exercicio 8
   
+  #include <stdio.h>
+#include <math.h>
+int
+main()
+{ 
+  
+  float x, y, media;
+  
+  printf("Digite a nota 1\n");
+  scanf("%f", &x);
+
+  printf("\n");
+  
+  printf("Digite a nota 2\n");
+  scanf("%f",&y);
+  
+  printf("\n");
+  
+  if((x>=0)&&(x<=10)&&(y>=0)&&(y<=10))
+  {
+    media = (x+y)/2;
+    printf("A media e %.2f", media);
+    return 0;
+  }
+  else
+  {
+    printf("Os valores %.2f %.2f sao invalidos", x, y);
+    return 0;
+  }
+}
+  
+//Exercicio 9
   
   
   
