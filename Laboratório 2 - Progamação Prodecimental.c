@@ -137,6 +137,54 @@ main()
 
 //Exercicio 6
   
+#include <stdio.h>
+#include <math.h>
+int
+main()
+{ 
+  
+  int x, y, diferenca;
+  
+  printf("Digite um numero inteiro");
+  scanf("%i", &x);
+
+  printf("\n");
+  
+  printf("Digite um numero inteiro");
+  scanf("%i",&y);
+  
+  printf("\n");
+  
+  if(x>y)
+    {
+      printf("O numero %i e o maior", x);
+      
+      printf("\n");
+      
+      diferenca = x - y;
+
+      printf("A diferenca entre os dois e %i", diferenca);
+      
+      return 0;
+    }
+    else
+    {
+      printf("O numero %i e o maior", y);
+      
+      printf("\n");
+      
+      diferenca = y - x;
+
+      printf("A diferenca entre os dois e %i", diferenca);
+      
+      return 0;
+    }
+}
+  
+//Exercicio 7
+  
+  
+  
   
 
   
