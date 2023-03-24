@@ -54,4 +54,31 @@ main()
 
   //Exercício 3
   
+  #include <stdio.h>
+#include <math.h>
+int
+main()
+{ 
+  float x, raiz, aoquadrado;
+  
+  printf ("Digite um numero real");
+  scanf ("%f", &x);
+  
+  printf ("\n");
+  if(x>=0)
+    
+  {
+    raiz = sqrt(x);
+    printf("A raiz do numero e %.2f", raiz);
+    return 0;
+  }
+  else
+  {
+    aoquadrado = pow(x,2);
+    printf("O numero ao quadrado e %.2f", aoquadrado);
+    return 0;
+  }
+
+//Exercício 4
+  
   
