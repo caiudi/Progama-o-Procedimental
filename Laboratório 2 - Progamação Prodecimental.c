@@ -318,33 +318,33 @@ main()
 int 
 main()
 {
-    float altura, peso;
-    char sexo;
-    printf ("Digite a altura\n");
-    scanf ("%f", &altura);
+    int numero, soma=0;
+    printf ("Digite um numero inteiro\n");
+    scanf ("%i", &numero);
 
     printf ("\n");
 
-    printf ("Digite o sexo : F ou M \n");
-    scanf ("%s", &sexo);
-
-    if (sexo=='M')
+    if (numero>=0)
     {
-        peso = ((72.7*altura) - 58);
-        printf ("Seu peso ideal e: %.2f", peso);
-        
+        while(numero>0)
+        {
+            soma=soma+numero%10;
+            numero=numero/10;
+        }
+        printf ("A soma dos numeros e: %i", soma);
         return 0;
     }
-    else 
+    else
     {
-       peso = ((62.1*altura) - 44.7);   
-       printf ("Seu peso ideal e: %.2f", peso);
-
-       return 0;
+        printf ("Numero invalido");
+        return 0;
     }
 }
 
+
 //Exercício 12
+  
+
   
   
 
