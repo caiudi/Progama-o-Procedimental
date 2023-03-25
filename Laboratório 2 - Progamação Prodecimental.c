@@ -282,9 +282,73 @@ main()
   
 //Exercício 10
   
+#include <stdio.h>
+int 
+main()
+{
+    float altura, peso;
+    char sexo;
+    printf ("Digite a altura\n");
+    scanf ("%f", &altura);
+
+    printf ("\n");
+
+    printf ("Digite o sexo : F ou M \n");
+    scanf ("%s", &sexo);
+
+    if (sexo=='M')
+    {
+        peso = ((72.7*altura) - 58);
+        printf ("Seu peso ideal e: %.2f", peso);
+        
+        return 0;
+    }
+    else 
+    {
+       peso = ((62.1*altura) - 44.7);   
+       printf ("Seu peso ideal e: %.2f", peso);
+
+       return 0;
+    }
+}
+
+//Exercício 11
+  
+#include <stdio.h>
+int 
+main()
+{
+    float altura, peso;
+    char sexo;
+    printf ("Digite a altura\n");
+    scanf ("%f", &altura);
+
+    printf ("\n");
+
+    printf ("Digite o sexo : F ou M \n");
+    scanf ("%s", &sexo);
+
+    if (sexo=='M')
+    {
+        peso = ((72.7*altura) - 58);
+        printf ("Seu peso ideal e: %.2f", peso);
+        
+        return 0;
+    }
+    else 
+    {
+       peso = ((62.1*altura) - 44.7);   
+       printf ("Seu peso ideal e: %.2f", peso);
+
+       return 0;
+    }
+}
+
+//Exercício 12
   
   
-  
+
+
 
   
 
