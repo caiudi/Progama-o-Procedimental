@@ -251,6 +251,37 @@ main()
 }
   
 //Exercicio 9
+
+#include <stdio.h>
+int
+main()
+{
+    int salario, emprestimo;
+    
+    printf ("Digite o salario");
+    scanf ("%i", &salario);
+   
+    printf ("\n");
+
+    printf ("Digite a prestacao do emprestimo");
+    scanf ("%i", &emprestimo);
+    
+    printf ("\n");
+
+    if (emprestimo>0.2*salario)
+    {
+        printf ("Emprestimo nao concedido");
+        return 0;
+    }
+    else
+    { 
+        printf ("Emprestimo concedido");
+        return 0;
+    }
+}
+  
+//Exercício 10
+  
   
   
   
