@@ -344,6 +344,34 @@ main()
 
 //Exercício 12
   
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int numero, log;
+
+    printf ("Digite um numero inteiro\n");
+    scanf ("%i", &numero);
+
+    printf ("\n");
+
+    if (numero>=0)
+    {
+        log = log10(numero);
+        printf ("O logaritimo do numero e: %i", log);
+        return 0;
+    }
+    else
+    { 
+        printf ("Numero invalido");
+        return 0;
+    }
+}
+
+//Exercício 13
+  
+  
 
   
   
