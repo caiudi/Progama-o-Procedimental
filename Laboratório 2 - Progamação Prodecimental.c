@@ -371,7 +371,53 @@ main()
 
 //Exercício 13
   
-  
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int p1, p2, p3, media;
+
+    printf ("Digite o valor da primeira prova\n");
+    scanf ("%i", &p1);
+
+    printf ("\n");
+
+    printf ("Digite o valor da segunda prova\n");
+    scanf ("%i", &p2);
+
+    printf ("\n");
+
+    printf ("Digite o valor da terceira prova\n");
+    scanf ("%i", &p3);
+
+    printf ("\n");
+
+    media = (1*p1 + 1*p2 + 3*p3)/5;
+
+    if (media>=60)
+    {
+        printf ("A media foi de: %i", media);
+
+        printf ("\n");
+
+        printf ("O aluno foi aprovado");
+        
+        return 0;
+    }
+    else
+    { 
+        printf ("A media foi de: %i\n", media);
+        
+        printf ("\n");
+        
+        printf ("O aluno foi reprovado");
+
+        return 0;
+    }
+}
+
+//Exercício 14
 
   
   
