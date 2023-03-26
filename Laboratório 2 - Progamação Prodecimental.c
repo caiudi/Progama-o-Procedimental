@@ -419,7 +419,61 @@ main()
 
 //Exercício 14
 
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int lab, avaliacao, final, media;
+
+    printf ("Digite a nota do trabalho de laboratorio [0 a 10]\n");
+    scanf ("%i", &lab);
+
+    printf ("\n");
+
+    printf ("Digite a nota da avaliacao semestral [0 a 10]\n");
+    scanf ("%i", &avaliacao);
+
+    printf ("\n");
+
+    printf ("Digite a nota do exame final [0 a 10]\n");
+    scanf ("%i", &final);
+
+    printf ("\n");
+    
+    media = (2*lab+3*avaliacao+5*final)/10;
+
+    if (media>0 && media<2.9)
+    {
+        printf ("A media foi de: %i", media);
+
+        printf ("\n");
+
+        printf ("O aluno foi reprovado");
+        
+        return 0;
+    }
+    if (media>3 && media<4.9)
+    {  
+        printf ("A media foi de: %i", media);
+        
+        printf ("\n");
+
+        printf ("O aluno esta de recuperacao");
+
+        return 0;
+    }
+    if (media>4.9)
+    {
+         printf ("A media foi de: %i", media);
+        
+        printf ("\n");
+
+        printf ("O aluno esta aprovado");
+    }
+}
   
+//Exercício 15
   
 
 
