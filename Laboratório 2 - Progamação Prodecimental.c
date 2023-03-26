@@ -475,7 +475,43 @@ main()
   
 //Exercício 15
   
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int numero, dia;
 
+    printf ("Digite um numero inteiro [0 a 7]\n");
+    scanf ("%i", &numero);
+
+    printf ("\n");
+
+    switch ( numero )
+    {
+        case 1:
+            printf ("Domingo\n"); break;
+        case 2:
+            printf ("Segunda\n"); break;
+        case 3:
+            printf ("Terca\n"); break;
+        case 4:
+            printf ("Quarta\n"); break;
+        case 5:
+            printf ("Quinta\n"); break;
+        case 6:
+            printf ("Sexta\n"); break;
+        case 7:
+            printf ("Sabado\n"); break;
+        default:
+            printf ("Nao corresponde a um dia"); break;
+    } 
+    return 0;
+}
+  
+//Exercicio 16
+  
+  
 
 
   
