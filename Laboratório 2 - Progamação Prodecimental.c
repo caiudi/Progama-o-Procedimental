@@ -689,7 +689,38 @@ main()
   
 //Exercicio 21
   
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int numero, num1, num2, soma, diferenca;
+        
+    printf ("Escolha uma opcao:\n 1 - Soma de 2 numeros\n 2 - Diferenca entre 2 numeros (maior pelo menor)\n 3 - Produto entre 2 numeros\n 4 - Divisao entre 2 numeros (o denominador nao pode ser 0)\n");
+    scanf ("%i", &numero);
+        
 
+    printf ("\n");
+
+    switch (numero)
+    {  
+        case 1: 
+          
+        printf ("Digite 2 numeros\n");
+        scanf ("%i %i", &num1, &num2);
+
+        soma = num1+num2;
+
+        printf ("A soma e igual a: %i", soma); break;
+            
+        case 2:
+            
+         printf ("Digite 2 numeros\n");
+         scanf ("%i %i", num1, num2);
+    }
+}
+
+           
 
 
 
