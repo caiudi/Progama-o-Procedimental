@@ -649,7 +649,47 @@ main()
 }
   
 //Exercício 20
+
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int a, b, c;
+    
+    printf ("Digite tres valores positivos\n");
+    scanf ("%i %i %i", &a, &b, &c);
+
+    printf ("\n");
+
+    if( a + b > c && a + c > b && b + c > a)
+    {
+        if(a == b && a == c )
+        { 
+        printf ("Os valores fornecidos formam um triangulo equilatero.");
+        return 0;
+        }
+        if(a == b || a == c || b == c)
+        { 
+        printf ("Os valores fornecidos formam um triangulo isosceles");
+        return 0;
+        }
+        else
+        { 
+        printf ("Os valores fornecidos formam um triangulo escaleno");
+        return 0;
+        }
+    }
+    else
+    { 
+        printf ("Os valores fornecidos nao formam um triangulo");
+        return 0;
+    }
+}
   
+//Exercicio 21
+  
+
 
 
 
