@@ -619,7 +619,38 @@ main()
   
 //Exercício 19
   
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int numero;
+    
+    printf ("Digite um numero\n");
+    scanf ("%i", &numero);
+    
+    printf ("\n");
+
+    if(numero%3==0)
+    {
+        printf ("O numero %i e divisivel por 3", numero);
+        return 0;
+    }
+    if(numero%5==0)
+    {
+        printf ("O numero %i e divisivel por 5", numero);
+        return 0;
+    }
+    if(numero%3==0 && numero%5==0)
+    {
+        printf ("O numero e divisivel pelos 2 simultaneamente");
+        return 0;
+    }
+}
   
+//Exercício 20
+  
+
 
 
   
