@@ -824,8 +824,60 @@ main()
 //Exercício 24
  
 //Exercício 25
-  
- 
+
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    float a, x, b, c, delta, raiz1, raiz2;
+    printf ("Digite o valor da variavel a, sendo ela diferente de 0\n"); 
+    scanf ("%f", &a);
+
+    printf ("\n");
+
+    printf ("Digite o valor da variavel b\n"); 
+    scanf ("%f", &b);
+
+    printf ("\n");
+
+    printf ("Digite o valor da variavel c\n"); 
+    scanf ("%f", &c);
+
+    printf ("\n");
+
+    printf ("Digite o valor da variavel x\n"); 
+    scanf ("%f", &x);
+
+    printf ("\n");
+    
+    delta = (b*b)-4*a*c;
+    
+    
+    printf ("Sua equacao e: %.0fx^2 + %.0fx + %.0f\n", a, b, c);
+    
+    if (delta<0)
+    {
+        printf ("Nao existe raiz");
+        return 0;
+    }
+    if (delta>0)
+    {
+        raiz1=(-b + sqrt(delta))/(2*a);
+        raiz2=(-b - sqrt(delta))/(2*a);
+        printf ("As raizes sao %.2f e %.2f", raiz1, raiz2);
+    }
+    if (delta==0)
+    {
+        raiz1=(-b + sqrt(delta))/(2*a);
+        printf ("A raiz unica e igual a: %.2f", raiz1);
+    } 
+    else
+    {
+        printf ("Nao e equacao do segundo grau");
+        return 0;
+    }
+}
   
   
 
