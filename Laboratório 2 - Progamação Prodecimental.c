@@ -557,7 +557,37 @@ main()
   
 //Exercício 17
 
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int baseM, basem, altura, area1, area2;
+    
+    printf ("Digite a base maior do trapezio\n");
+    scanf ("%i", &baseM);
+    
+    printf ("\n");
 
+    printf ("Digite a base menor do trapezio\n");
+    scanf ("%i", &basem);
+
+    printf ("\n");
+
+    printf ("Digite a altura do trapezio\n");
+    scanf ("%i", &altura);
+
+    printf ("\n");
+
+    area1=(baseM+basem)*altura;
+    area2= area1/2;
+
+    printf ("A area do trapezio e: %i", area2);
+
+    return 0;
+}
+  
+//Exercicio 18
   
 
 
