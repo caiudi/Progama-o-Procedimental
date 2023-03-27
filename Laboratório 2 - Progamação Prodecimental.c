@@ -694,7 +694,7 @@ main()
 int 
 main()
 {
-    int numero, num1, num2, soma, diferenca;
+    int numero, num1, num2, soma, diferenca, produto, divisao;
         
     printf ("Escolha uma opcao:\n 1 - Soma de 2 numeros\n 2 - Diferenca entre 2 numeros (maior pelo menor)\n 3 - Produto entre 2 numeros\n 4 - Divisao entre 2 numeros (o denominador nao pode ser 0)\n");
     scanf ("%i", &numero);
@@ -715,12 +715,51 @@ main()
             
         case 2:
             
-         printf ("Digite 2 numeros\n");
-         scanf ("%i %i", num1, num2);
+         printf ("Digite 2 numeros, sendo o primeiro maior que o segundo\n");
+         scanf ("%i %i", &num1, &num2);
+         if (num1>num2)
+         {
+            diferenca = num1-num2;
+            printf("A diferenca entre os numeros e %i", diferenca);
+            return 0;
+         }
+         else 
+         { 
+            printf ("Numeros invalidos");
+            return 0;
+         } break;
+        
+        case 3:
+
+
+        printf ("Digite 2 numeros\n");
+        scanf ("%i %i", &num1, &num2);
+
+        produto = num1*num2;
+        printf ("O Produto entre os numeros e: %i", produto); break;
+
+        case 4:
+
+        printf ("Digite 2 numeros, sendo o segundo diferente de 0\n");
+        scanf ("%i %i", &num1, &num2);
+        if (num2==0)
+        {
+            printf ("Numeros invalidos");
+            return 0;
+        }
+        else
+        {
+            divisao = num1/num2;
+            printf ("A divisao entre os numeros e: %i", divisao);
+            return 0;
+        }
     }
 }
 
-           
+//Exercício 22
+  
+
+ 
 
 
 
