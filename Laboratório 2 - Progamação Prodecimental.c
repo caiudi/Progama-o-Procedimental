@@ -588,6 +588,37 @@ main()
 }
   
 //Exercicio 18
+ 
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int operacoes, num1, num2;
+    
+    printf ("Selecione um:\n 1 - Soma\n 2 - Subtracao\n 3 - Multiplicacao\n 4 - Divisao\n");
+    scanf ("%d", &operacoes);
+    
+    printf ("\n");
+
+    if (operacoes>0 && operacoes<5)
+    { 
+        printf ("Digite dois valores");
+        scanf ("%i %i", &num1, &num2);
+    }
+    switch (operacoes)
+    {
+        case 1: printf ("A Soma dos numeros e: %d\n", num1 + num2); break;
+        case 2: printf ("A Diferenca dos numeros e: %d\n", num1 - num2); break;
+        case 3: printf ("A Multiplicacao entre os numeros e: %d\n", num1*num2); break;
+        case 4: printf ("A Divisao entre os numeros e: %d\n", num1/num2); break;
+        default: printf ("Operacao invalida"); break;
+    }
+}
+
+  
+//Exercício 19
+  
   
 
 
