@@ -758,6 +758,43 @@ main()
 
 //Exercício 22
   
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int idade, tempo;
+    printf ("Digite a idade e o tempo de servico em anos\n");
+    scanf ("%i %i", &idade, &tempo);
+
+    printf ("\n");
+
+    if (idade>=65)
+    {
+        printf ("Aposentadoria valida");
+        return 0;
+    }
+    if (tempo>=30)
+    {
+        printf ("Aposentadoria valida");
+        return 0;
+    }
+    if (idade>=60 && tempo>=25)
+    {
+        printf ("Aposentadoria valida");
+        return 0;
+    }
+    else
+    {
+        printf ("Aposentadoria invalida");
+        return 0;
+    } 
+}
+  
+//Execício 23
+  
+  
+  
 
  
 
