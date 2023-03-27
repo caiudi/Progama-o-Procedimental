@@ -793,6 +793,36 @@ main()
   
 //Execício 23
   
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int ano;
+    printf ("Digite um ano\n");
+    scanf ("%i", &ano);
+
+    printf ("\n");
+
+    if (ano%400==0)
+    {
+        printf ("Esse ano e bissexto");
+        return 0;
+    }
+    if (ano%4==0 && ano%100!=0)
+    {
+        printf ("Esse ano e bissexto");
+        return 0;
+    }
+    else 
+    {
+        printf ("Esse ano nao e bissexto");
+        return 0;
+    }
+}
+ 
+//Exercício 24
+  
   
   
 
