@@ -1002,6 +1002,57 @@ main()
   
 //Exercicio 28
   
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int x, y, z, medias, mediad1, mediad2;
+    printf ("Digite 3 numeros inteiros positivos\n");
+    scanf ("%i%i%i", &x, &y, &z);
+
+    printf ("\n");
+
+    printf ("Escolha uma das medias a seguir:\n 1 - Geometrica\n 2 - Ponderada\n 3 - Harmonica\n 4 - Aritmetica\n");
+    scanf ("%i", &medias);
+
+    printf ("\n");
+
+    switch (medias)
+    {
+    case 1:
+    {
+        mediad1 = x*y*z;
+        mediad2 = pow(mediad1, 1.0/3.0);
+        printf ("A media geometrica e: %i", mediad2);
+        break;
+    }
+    case 2:
+    {
+        mediad2 = (1*x)+(2*y)+(3*z)/3;
+        printf ("A media ponderada e: %i", mediad2);
+        break;
+    }
+    case 3:
+    {
+        mediad1 = 1/x + 1/y + 1/z;
+        mediad2 = 1/mediad1;
+        printf ("A media harmonica e: %i", mediad2);
+        break;
+    }
+    case 4:
+    {
+        mediad2 = (x+y+z)/2;
+        printf ("A media aritmetica e: %i", mediad2);
+        break;
+    }
+    default:
+    printf ("Comando invalido"); 
+    break;
+    }
+}
+  
+//Exercicio 29
   
   
   
