@@ -822,7 +822,45 @@ main()
 }
  
 //Exercício 24
- 
+
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    float valor1, valor2;
+    int estado;
+    printf ("Digite um valor");
+    scanf ("%f", &valor1);
+
+    printf ("\n");
+
+    printf ("Selecione um estado:\n 1 - MG\n 2 - SP\n 3 - RJ\n 4 - MS");
+    scanf ("%i", &estado);
+    
+    printf ("\n");
+    
+    switch (estado)
+    {
+    case 1:
+    valor2 = valor1*1.07;
+    printf ("Valor final igual a %.2f", valor2); break;
+    case 2:
+    valor2 = valor1*1.12;
+    printf ("Valor final igual a %.2f", valor2); break;
+    case 3:
+    valor2 = valor1*1.15;
+    printf ("Valor final igual a %.2f", valor2); break;
+    case 4:
+    valor2 = valor1*1.08;
+    printf ("Valor final igual a %.2f", valor2); break;
+    default:
+    printf ("Estado nao valido");
+        break;
+    }
+    return 0;
+}
+    
 //Exercício 25
 
 #include <stdio.h>
@@ -878,6 +916,8 @@ main()
         return 0;
     }
 }
+  
+//Exercicio 26
   
   
 
