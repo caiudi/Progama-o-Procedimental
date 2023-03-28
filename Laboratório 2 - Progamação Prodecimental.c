@@ -956,6 +956,52 @@ main()
 }
   
 //Exercicio 27
+
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int idade;
+    printf ("Digite a idade\n");
+    scanf ("%i", &idade);
+    
+    printf ("\n");
+
+    if (idade >= 5 && idade <= 7)
+    {
+        printf ("Categoria Infantil A");
+        return 0;
+    }
+    if (idade >= 8 && idade <= 1)
+    {
+        printf ("Categoria Infantil B");
+        return 0;
+    }
+    if (idade >= 11 && idade <= 13)
+    {
+        printf ("Categoria Juvenil A");
+        return 0;
+    }
+    if (idade >= 14 && idade <= 17)
+    {
+        printf ("Categoria Juvenil B");
+        return 0;
+    }
+    if (idade >= 18)
+    {
+        printf ("Senior");
+        return 0;
+    }
+    else
+    {
+        printf ("Idade Invalida");
+        return 0;
+    }
+}
+  
+//Exercicio 28
+  
   
   
   
