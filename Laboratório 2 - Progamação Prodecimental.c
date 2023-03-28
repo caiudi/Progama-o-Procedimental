@@ -918,6 +918,45 @@ main()
 }
   
 //Exercicio 26
+
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int distancia, combustivel, KML;
+
+    printf ("Digite uma distancia em KM\n");
+    scanf ("%i", &distancia);
+
+    printf ("\n");
+
+    printf ("Digite a quantidade de litros de gasolina consumidos\n");
+    scanf ("%i", &combustivel);
+
+    printf ("\n");
+
+    KML = distancia/combustivel;
+
+    if (KML<8)
+    {  
+        printf ("Venda o carro!");
+        return 0;
+    }
+    if (KML >= 8 && KML<18)
+    {
+        printf ("Economico!");
+        return 0;
+    }
+    if (KML>14)
+    {
+        printf ("Super Economico!");
+        return 0;
+    }
+}
+  
+//Exercicio 27
+  
   
   
 
