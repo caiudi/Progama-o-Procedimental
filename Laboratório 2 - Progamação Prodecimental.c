@@ -1191,7 +1191,7 @@ int main()
 }
   
 //Exercício 33
- 
+  
 #include <stdio.h>
 
 int main() 
@@ -1207,24 +1207,42 @@ int main()
   if ( preco1 < 50 )
   {
     preco2 = preco1*1.05;
-    printf ("Preco novo: %.2f", preco2);
-    return 0;
+    printf ("Preco novo: %.2f\n", preco2);
   }
   if ( preco1>=50 && preco1<=100)
   {
     preco2 = preco1*1.10;
-    printf ("Preco novo: %.2f", preco2);
-    return 0;
+    printf ("Preco novo: %.2f\n", preco2);
   }
   if ( preco1 > 100)
   {
     preco2 = preco1*1.15;
-    printf ("Preco novo: %.2f", preco2);
+    printf ("Preco novo: %.2f\n", preco2);
+  }
+  if ( preco2 < 80)
+  {
+    printf ("Barato");
+    return 0;
+  }
+  if ( preco2 >= 80 && preco2 <120)
+  {
+    printf ("Normal");
+    return 0;
+  }
+  if ( preco2 >= 120 && preco2 <=200);
+  {
+    printf ("Caro");
+    return 0;
+  }
+  if ( preco2 > 100 )
+  {
+    printf ("Muito caro");
     return 0;
   }
 }
   
 //Exercício 34
+  
   
   
 
