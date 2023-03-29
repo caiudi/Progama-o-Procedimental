@@ -1054,6 +1054,48 @@ main()
   
 //Exercicio 29
   
+//Exercicio 30
+  
+#include <stdio.h>
+
+int main() 
+{
+  int x, y, z;
+  
+  printf("Digite tres numeros: ");
+  scanf("%i %i %i", &x, &y, &z);
+  
+  
+  if (x <= y && y <= z)
+    {
+      printf("A ordem crescente: %d %d %d\n", x, y, z);
+    }
+    if (x <= z && z <= y)
+    {
+      printf("A ordem crescente: %d %d %d\n", x, z, y);
+    }
+    if (y <= x && x <= z)
+    {
+      printf("A ordem crescente: %d %d %d\n", y, x, z);
+    }
+    if (y <= z && z <= x) 
+    {
+      printf("A ordem crescente: %d %d %d\n", y, z, x);
+    }
+    if (z <= x && x <= y) 
+    {
+      printf("A ordem crescente: %d %d %d\n", z, x, y);
+    }
+  else
+    {
+      printf("A ordem crescente: %d %d %d\n", z, y, x);
+    }
+
+  return 0;
+
+}
+  
+//Exercicio 31
   
   
 
