@@ -1097,6 +1097,56 @@ int main()
   
 //Exercicio 31
   
+#include <stdio.h>
+
+int main() 
+{
+  float altura, peso;
+  
+  printf ("Digite a altura:\n");
+  scanf ("%f", &altura);
+
+  printf ("\n");
+
+  printf ("Digite o peso:\n");
+  scanf ("%f", &peso);
+
+  printf ("\n");
+
+  if (altura<1.2)
+  {
+    if (peso<60){
+    printf ("Classificação A");
+    } if (peso>=60 && peso<=90) {  
+    printf ("Classificacao D");
+    } if (peso>90) {     
+    printf ("Classificacao G");
+    }
+  }
+  if (altura>=1.20 && altura<=1.70)
+  {
+    if (peso<60){
+    printf ("Classificação B");
+    } if (peso>=60 && peso<=90) {  
+    printf ("Classificacao E");
+    } if (peso>90) {     
+    printf ("Classificacao H");
+    }
+  }
+  if (altura>1.70)
+  {
+  if (peso<60){
+    printf ("Classificação C");
+    } if (peso>=60 && peso<=90) {  
+    printf ("Classificacao F");
+    } if (peso>90) {     
+    printf ("Classificacao I");
+    }
+}
+}
+  
+//Exercicio 32
+  
   
 
  
