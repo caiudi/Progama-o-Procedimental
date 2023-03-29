@@ -1192,7 +1192,41 @@ int main()
   
 //Exercício 33
  
+#include <stdio.h>
 
+int main() 
+{
+  int preco1;
+  float preco2;
+  
+  printf ("Digite o preco antigo\n");
+  scanf ("%i", &preco1);
+
+  printf ("\n");
+  
+  if ( preco1 < 50 )
+  {
+    preco2 = preco1*1.05;
+    printf ("Preco novo: %.2f", preco2);
+    return 0;
+  }
+  if ( preco1>=50 && preco1<=100)
+  {
+    preco2 = preco1*1.10;
+    printf ("Preco novo: %.2f", preco2);
+    return 0;
+  }
+  if ( preco1 > 100)
+  {
+    preco2 = preco1*1.15;
+    printf ("Preco novo: %.2f", preco2);
+    return 0;
+  }
+}
+  
+//Exercício 34
+  
+  
 
 
   
