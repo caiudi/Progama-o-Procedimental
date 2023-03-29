@@ -1116,7 +1116,7 @@ int main()
   if (altura<1.2)
   {
     if (peso<60){
-    printf ("Classificação A");
+    printf ("Classificacao A");
     } if (peso>=60 && peso<=90) {  
     printf ("Classificacao D");
     } if (peso>90) {     
@@ -1126,7 +1126,7 @@ int main()
   if (altura>=1.20 && altura<=1.70)
   {
     if (peso<60){
-    printf ("Classificação B");
+    printf ("Classificacao B");
     } if (peso>=60 && peso<=90) {  
     printf ("Classificacao E");
     } if (peso>90) {     
@@ -1136,7 +1136,7 @@ int main()
   if (altura>1.70)
   {
   if (peso<60){
-    printf ("Classificação C");
+    printf ("Classificacao C");
     } if (peso>=60 && peso<=90) {  
     printf ("Classificacao F");
     } if (peso>90) {     
