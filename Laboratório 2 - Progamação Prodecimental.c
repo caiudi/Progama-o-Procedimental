@@ -1243,7 +1243,44 @@ int main()
   
 //Exercício 34
   
+#include <stdio.h>
+
+int main() 
+{
+    float nota, faltas;
+    printf ("Digite a nota [0 a 10] e o numero de faltas\n");
+    scanf ("%i%i", &nota, &faltas);
+
+    printf ("\n");
+
+    if (nota >=9 && nota<=10)
+    {
+        if ( faltas < 20) printf ("A");
+        if ( faltas > 20) printf ("B");
+    }
+    if ( nota >= 7.5 && nota <= 8.9)
+    {
+        if ( faltas < 20) printf ("B");
+        if ( faltas > 20) printf ("C");
+    }
+    if ( nota >= 5 && nota <= 7.4)
+    {
+        if ( faltas < 20) printf ("C");
+        if ( faltas > 20) printf ("D");
+    }
+    if ( nota >= 4 && nota <= 4.9)
+    {
+        if ( faltas < 20) printf ("D");
+        if ( faltas > 20) printf ("E");
+    }
+    if ( nota >= 0.0 && nota <= 3.9)
+    {
+        if ( faltas < 20) printf ("E");
+        if ( faltas > 20) printf ("E");
+    }
+}
   
+//Exercício 35
   
 
 
