@@ -1147,8 +1147,50 @@ int main()
   
 //Exercicio 32
   
-  
+#include <stdio.h>
 
+int main() 
+{
+  int codigo, quantidade;
+  float valorf;
+  printf ("Digite um dos codigos a seguir:\n 100 - Cachorro Quente\n 101 - Bauru Simples\n 102 - Bauru com Ovo\n 103 - Hamburguer\n 104 - Cheeseburguer\n 105 - Suco\n 106 - Refrigerante\n");
+  scanf ("%i", &codigo);
+
+  printf ("\n");
+
+  printf ("Digite a quantidade\n");
+  scanf ("%i", &quantidade);
+
+  switch (codigo)
+  {
+  case 100:
+  valorf = quantidade*1.20;
+  printf ("Valor a ser pago e: %.2f", valorf); break;
+  case 101:
+  valorf = quantidade*1.30;
+  printf ("Valor a ser pago e: %.2f", valorf); break;
+  case 102:
+  valorf = quantidade*1.50;
+  printf ("Valor a ser pago e: %.2f", valorf); break;
+  case 103:
+  valorf = quantidade*1.20;
+  printf ("Valor a ser pago e: %.2f", valorf); break;
+  case 104:
+  valorf = quantidade*1.70;
+  printf ("Valor a ser pago e: %.2f", valorf); break;
+  case 105:
+  valorf = quantidade*2,20;
+  printf ("Valor a ser pago e: %.2f", valorf); break;
+  case 106:
+  valorf = quantidade*1.00;
+  printf ("Valor a ser pago e: %.2f", valorf); break;
+  default:
+  printf ("Codigo nao valido");
+    break;
+}
+}
+  
+//Exercício 33
  
 
 
