@@ -1418,5 +1418,12 @@ int main()
   
 //Exercicio 37 
 
+//Exercicio 38
+  
+//Exercicio 39
+  
+//Exercicio 40
+  
+  
 
   
