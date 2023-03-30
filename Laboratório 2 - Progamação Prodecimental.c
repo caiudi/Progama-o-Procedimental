@@ -1563,6 +1563,39 @@ int main()
   
 //Exercicio 40
   
-  
+#include <stdio.h>
+
+int main() 
+{
+    float custof, distribuidor, impostos, custoc;
+    printf ("DIigite o custo de fabrica\n");
+    scanf ("%f", &custof);
+    
+    printf ("\n");
+
+    if (custof < 12000)
+    {
+        distribuidor = custof*0.05;
+        custoc = distribuidor+custof;
+        printf ("O custo ao consumidor r: %.2f", custoc);
+        return 0;
+    }
+    if (custof >= 12000 && custof < 25000)
+    {
+        distribuidor = custof*0.10;
+        impostos = custof*0.15;
+        custoc = impostos+distribuidor+custof;
+        printf ("O custo ao consumidor r: %.2f", custoc);
+        return 0;
+    }
+    if (custof > 25000)
+    {
+        distribuidor = custof*0.15;
+        impostos = custof*0.20;
+        custoc = distribuidor+custof;
+        printf ("O custo ao consumidor r: %.2f", custoc);
+        return 0;
+    }
+}
 
   
