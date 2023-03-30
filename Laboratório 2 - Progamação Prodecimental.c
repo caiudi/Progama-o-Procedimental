@@ -1062,6 +1062,7 @@ int x = 0,acertos = 0;
 float a, b, soma, resp;
 do
 {
+    srand(time(NULL));
     a = (rand() % 100) + 1;
     b = (rand() % 100) + 1;
 
