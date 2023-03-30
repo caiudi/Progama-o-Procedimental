@@ -1311,53 +1311,53 @@ int main()
     }
     case 3:
     {
-    if (dia <= 31) printf ("Data Valida");
-    else printf ("Data invalida"); break; 
+        if (dia <= 31) printf ("Data Valida");
+        else printf ("Data invalida"); break; 
     }
     case 4:
     {
-    if (dia <= 30) printf ("Data Valida");
-    else printf ("Data invalida"); break;
+        if (dia <= 30) printf ("Data Valida");
+        else printf ("Data invalida"); break;
     }
     case 5:
     {
-    if (dia <= 31) printf ("Data Valida");
-    else printf ("Data invalida"); break;
+        if (dia <= 31) printf ("Data Valida");
+        else printf ("Data invalida"); break;
     }
     case 6:
     {
-    if (dia <= 30) printf ("Data Valida");
-    else printf ("Data invalida"); break;
+        if (dia <= 30) printf ("Data Valida");
+        else printf ("Data invalida"); break;
     }
     case 7:
     {
-    if (dia <= 31) printf ("Data Valida");
-    else printf ("Data invalida"); break;
+        if (dia <= 31) printf ("Data Valida");
+        else printf ("Data invalida"); break;
     }
     case 8:
     {
-    if (dia <= 31) printf ("Data Valida");
-    else printf ("Data invalida"); break;
+        if (dia <= 31) printf ("Data Valida");
+        else printf ("Data invalida"); break;
     }
     case 9:
     {
-    if (dia <= 30) printf ("Data Valida");
-    else printf ("Data invalida"); break;
+        if (dia <= 30) printf ("Data Valida");
+        else printf ("Data invalida"); break;
     }
     case 10:
     {
-    if (dia <= 31) printf ("Data Valida");
-    else printf ("Data invalida"); break;
+        if (dia <= 31) printf ("Data Valida");
+        else printf ("Data invalida"); break;
     }
     case 11:
     {
-    if (dia <= 30) printf ("Data Valida");
-    else printf ("Data invalida"); break;
+        if (dia <= 30) printf ("Data Valida");
+        else printf ("Data invalida"); break;
     }
     case 12:
     {
-    if (dia <= 31) printf ("Data Valida");
-    else printf ("Data invalida"); break;
+        if (dia <= 31) printf ("Data Valida");
+        else printf ("Data invalida"); break;
     }
     default:
     printf ("Data invalida"); break;
