@@ -1366,7 +1366,57 @@ int main()
   
 //Exercício 36
   
+#include <stdio.h>
+
+int main() 
+{
+    float venda, comissao;
+
+    printf ("Digite o valor da venda\n");
+    scanf ("%f", &venda);
+
+    printf ("\n");
+
+    if (venda >=100000)
+    {
+        comissao = 700 + (0.16*venda);
+        printf ("A comissao sera de: %.2f", comissao);
+        return 0;
+    }
+    if (venda < 100000 && venda >= 80000)
+    {
+        comissao = 650 + (0.14*venda);
+        printf ("A comissao sera de: %.2f", comissao);
+        return 0;
+    }
+    if (venda < 80000 && venda >= 60000)
+    {
+        comissao = 600 + (0.14*venda);
+        printf ("A comissao sera de: %.2f", comissao);
+        return 0;
+    }
+    if (venda < 60000 & venda >= 40000)
+    {
+        comissao = 550 + (0.14*venda);
+        printf ("A comissao sera de: %.2f", comissao);
+        return 0;
+    }
+    if (venda < 40000 & venda >= 20000)
+    {
+        comissao = 500 + (0.14*venda);
+        printf ("A comissao sera de: %.2f", comissao);
+        return 0;
+    }
+    if (venda < 20000)
+    {
+        comissao = 400 + (0.14*venda);
+        printf ("A comissao sera de: %.2f", comissao);
+        return 0;
+    }
+}
+
   
+//Exercicio 37 
 
 
   
