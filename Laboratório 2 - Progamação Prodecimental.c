@@ -1054,6 +1054,37 @@ main()
   
 //Exercicio 29
   
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+int x = 0,acertos = 0;
+float a, b, soma, resp;
+do
+{
+    a = (rand() % 100) + 1;
+    b = (rand() % 100) + 1;
+
+    soma = a+b;
+    resp = soma;
+
+    printf("qual e a soma de %.0f + %.0f?\n",a,b);
+    scanf("%f",&resp);
+    
+    printf ("\n");
+    
+    if (resp!=soma)
+    printf("Resposta errada, a certa e:%.0f\n",soma);
+    if (resp == soma) 
+    printf ("Certa Resposta!\n");
+    else
+    acertos ++;
+    x++;
+} while (x<5);
+printf("Voce acertou %d!\n",acertos);
+return 0;
+}
+  
 //Exercicio 30
   
 #include <stdio.h>
@@ -1418,6 +1449,7 @@ int main()
   
 //Exercicio 37 
 
+  
 //Exercicio 38
   
 #include <stdio.h>
