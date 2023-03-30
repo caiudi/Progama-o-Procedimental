@@ -1509,6 +1509,57 @@ int main()
 }
 
 //Exercicio 39
+ 
+#include <stdio.h>
+
+int main() 
+{
+    int ano;
+    float salario1, salario2;
+    
+    printf ("Digite o salario atual\n");
+    scanf ("%f", &salario1);
+
+    printf ("\n");
+    
+    printf ("Digite o tempo de servico em anos");
+    scanf ("%i", &ano);
+
+    printf ("\n");
+
+    if ( salario1 <= 500 && ano < 1)
+    {
+        salario2 = salario1*1.25;
+        printf ("Novo salario: %.2f", salario2);
+        return 0;
+    }
+    if ( salario1 <= 1000 && ano >= 1 && ano <=3 )
+    {
+        salario2 = 100 + (salario1*1.20);
+        printf ("Novo salario: %.2f", salario2);
+        return 0;
+    }
+    if ( salario1 <= 1500 && ano >= 4 && ano <=6 )
+    {
+        salario2 = 200 + (salario1*1.15);
+        printf ("Novo salario: %.2f", salario2);
+        return 0;
+    }
+    if ( salario1 <= 2000 && ano >= 7 && ano <=10 )
+    {
+        salario2 = 300 + (salario1*1.10);
+        printf ("Novo salario: %.2f", salario2);
+        return 0;
+    }
+    if ( salario1 > 2000 && ano > 10 )
+    {
+        salario2 = 500 + salario1;
+        printf ("Novo salario: %.2f", salario2);
+        return 0;
+    }
+    else
+    printf ("Sem direito a aumento");
+}
   
 //Exercicio 40
   
