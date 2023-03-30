@@ -1282,6 +1282,91 @@ int main()
   
 //Exercício 35
   
+#include <stdio.h>
+
+int main() 
+{
+    int dia, mes;
+    printf ("Digite um dia\n");
+    scanf ("%i", &dia);
+
+    printf ("\n");
+
+    printf ("Digite um mes\n");
+    scanf ("%i", &mes);
+    
+    printf ("\n");
+
+    switch (mes)
+    {
+    case 1:
+    {
+        if (dia <= 31) printf ("Data Valida");
+        else printf ("Data invalida"); break;
+    }
+    case 2:
+    {
+        if (dia <= 28) printf ("Data Valida");
+        else printf ("Data invalida"); break;
+    }
+    case 3:
+    {
+    if (dia <= 31) printf ("Data Valida");
+    else printf ("Data invalida"); break; 
+    }
+    case 4:
+    {
+    if (dia <= 30) printf ("Data Valida");
+    else printf ("Data invalida"); break;
+    }
+    case 5:
+    {
+    if (dia <= 31) printf ("Data Valida");
+    else printf ("Data invalida"); break;
+    }
+    case 6:
+    {
+    if (dia <= 30) printf ("Data Valida");
+    else printf ("Data invalida"); break;
+    }
+    case 7:
+    {
+    if (dia <= 31) printf ("Data Valida");
+    else printf ("Data invalida"); break;
+    }
+    case 8:
+    {
+    if (dia <= 31) printf ("Data Valida");
+    else printf ("Data invalida"); break;
+    }
+    case 9:
+    {
+    if (dia <= 30) printf ("Data Valida");
+    else printf ("Data invalida"); break;
+    }
+    case 10:
+    {
+    if (dia <= 31) printf ("Data Valida");
+    else printf ("Data invalida"); break;
+    }
+    case 11:
+    {
+    if (dia <= 30) printf ("Data Valida");
+    else printf ("Data invalida"); break;
+    }
+    case 12:
+    {
+    if (dia <= 31) printf ("Data Valida");
+    else printf ("Data invalida"); break;
+    }
+    default:
+    printf ("Data invalida"); break;
+}
+}
+  
+//Exercício 36
+  
+  
 
 
   
