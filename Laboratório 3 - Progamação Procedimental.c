@@ -107,3 +107,31 @@ main()
 
 //Exercicio 7
 
+#include <stdio.h>
+int
+main()
+{
+    int x, y;
+    float media=0;
+    printf ("Digite um numero\n");
+    for (y=1; y<=10; y++)
+    {
+        scanf ("%i", &x);
+        if (x>=0)
+        { 
+        media = media+x;
+        }
+        else
+        {
+            printf ("Numero Invalido");
+            y--;
+        }
+    }
+        media = media/10;
+        printf ("A media dos numeros e: %.2f", media);
+        return 0;
+}
+
+//Exercicio 8
+
+
