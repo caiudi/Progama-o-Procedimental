@@ -1465,7 +1465,7 @@ main()
   printf ("\n");
 
   printf ("Digite a hora de saida e os minutos\n");
-  scanf ("%d", &hora2, &minuto2);
+  scanf ("%i %i", &hora2, &minuto2);
   
   printf ("\n");
  
