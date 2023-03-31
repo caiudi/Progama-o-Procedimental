@@ -40,6 +40,21 @@ main()
 
 //Exercicio 3
 
+#include <stdio.h>
+int
+main()
+{
+    int x=10;
+    while (x>=0)
+    {
+        printf ("%i\n", x);
+        x--;
+    }
+    return 0;
+}
+
+//Execício 4
+
 
 
 
