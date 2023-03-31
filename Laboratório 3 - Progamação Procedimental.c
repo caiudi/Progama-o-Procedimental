@@ -69,6 +69,23 @@ main()
 
 //Exercicio 5
 
+#include <stdio.h>
+int
+main()
+{
+    int x, soma=0, y=0;
+    printf ("Digite um numero");
+    do
+    {
+        scanf ("%i", &x);
+        soma = soma+x;
+        y++;
+    } while (y<10);
+    printf ("A soma e :%i", soma);
+    return 0;
+}
+
+//Exercicio 6
 
 
 
