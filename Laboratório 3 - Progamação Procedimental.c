@@ -171,3 +171,37 @@ main()
 
 //Exercício 9
 
+#include <stdio.h>
+#include <math.h>
+
+int 
+main()
+{
+    int numero, i=1;
+
+    printf ("Digite um numero inteiro\n");
+    scanf ("%i", &numero);
+    
+
+    if (numero>0)
+    {
+        while (numero!=0)
+        {
+            if (i%2!=0)
+            {
+                printf ("%i\n", i);
+                numero--;
+            }
+            i++;
+        }
+    }
+    else
+    {
+        printf ("Numero invalido");
+    }
+    return 0;
+}
+
+//Exercício 10
+
+
