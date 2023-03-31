@@ -1450,6 +1450,86 @@ int main()
   
 //Exercicio 37 
 
+#include <math.h>
+#include <stdio.h>
+
+int 
+main() 
+{
+  int hora1, minuto1, hora2, minuto2, entrada, saida, tempot;
+  float preco;
+  
+  printf ("Digite a hora de chegada e os minutos\n");
+  scanf ("%i %i", &hora1, &minuto1);
+  
+  printf ("\n");
+
+  printf ("Digite a hora de saida e os minutos\n");
+  scanf ("%d", &hora2, &minuto2);
+  
+  printf ("\n");
+ 
+  if (hora1 <= hora2) 
+  {
+    saida = hora2 * 60 + minuto2;
+    entrada = hora1 * 60 + minuto1;
+    tempot = saida - entrada;
+    if (tempot > 0 && tempot <= 60)
+    {
+      preco = 1.00;
+      printf ("O preco sera: %.2f\n", preco);
+    }
+    else if (tempot > 60 && tempot <= 120) {
+      preco = 2.00;
+      printf ("O preco sera: %.2f\n", preco);
+    }
+     else if (tempot > 120 && tempot <= 180) {
+      preco = 3.40;
+       printf ("O preco sera: %.2f\n", preco);
+    }
+     else if (tempot > 180 && tempot <= 240) {
+      preco = 4.80;
+       printf ("O preco sera: %.2f\n", preco);
+    }
+    else if (tempot > 240) {
+      do {
+        preco = preco + 1;
+        tempot = tempot + 60;
+      } while (tempot< 1440);
+      printf ("O preco sera: %.2f\n", preco);
+    }
+  } 
+if (hora1 > hora2) 
+{
+    saida = (hora2 + 24)*60 + minuto2;
+    entrada = (hora1)*60 + minuto1;
+    tempot = saida - entrada;
+    if (tempot > 0 && tempot <= 60) {
+      preco = 1.00;
+      printf ("O preco sera: %.2f\n", preco);
+    }
+    else if (tempot > 60 && tempot <= 120) {
+      preco = 2.00;
+      printf ("O preco sera: %.2f\n", preco);
+    }
+     else if (tempot > 120 && tempot <= 180) {
+      preco = 3.40;
+       printf ("O preco sera: %.2f\n", preco);
+    }
+     else if (tempot > 180 && tempot <= 240) {
+      preco = 4.80;
+       printf ("O preco sera: %.2f\n", preco);
+    }
+    else if (tempot > 240) {
+      do {
+        preco = preco + 1;
+        tempot = tempot + 60;
+      } while (tempot< 1440);
+      printf ("O preco a se pagar sera de %.2f reais\n", preco);
+    }
+  }
+  return 0;
+}
   
 //Exercicio 38
   
