@@ -87,5 +87,23 @@ main()
 
 //Exercicio 6
 
+#include <stdio.h>
+int
+main()
+{
+    int x, y=1;
+    float media=0;
+    printf ("Digite um numero");
+    do
+    {
+        scanf ("%i", &x);
+        media = media+x;
+        y++;
+    } while (y<=10);
+    media = media/10;
+    printf ("A media E: %.2f", media);
+    return 0;
+}
 
+//Exercicio 7
 
