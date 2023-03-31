@@ -55,6 +55,20 @@ main()
 
 //Execício 4
 
+#include <stdio.h>
+int
+main()
+{
+    int x;
+    for (x = 0 ; x <= 100000; x=x+1000)
+    {
+        printf ("%i ", x);
+    }
+    return 0;
+}
+
+//Exercicio 5
+
 
 
 
