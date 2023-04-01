@@ -224,3 +224,23 @@ main()
 
 //Exercício 12
 
+#include <stdio.h>
+
+int 
+main()
+{
+	int soma=1, numero, i=2;
+	printf ("Digite um numero\n");
+	scanf ("%i", &numero);
+	for (i=2; i<numero; i++)
+	{ 
+	 if (numero%i==0)
+	 {
+	printf ("%i - ", i);
+	soma +=i;
+	 }
+	}
+	printf ("A soma e: %i", soma);
+}
+
+//Exercício 13
