@@ -204,4 +204,23 @@ main()
 
 //Exercício 10
 
+//Exercício 11
+
+#include <stdio.h>
+#include <math.h>
+
+int 
+main()
+{
+    int numero, i;
+    printf ("Digite um numero inteiro positivo\n");
+    scanf ("%i", &numero);
+
+    printf ("\n");
+
+    for (i=0; i!=numero; i++)
+    printf ("%i\n", i);
+}
+
+//Exercício 12
 
