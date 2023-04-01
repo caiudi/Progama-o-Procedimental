@@ -279,3 +279,42 @@ main()
 
 //Exercício 14
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int 
+main()
+{
+	int i, d1, d2, lancamentos;
+	printf ("Digite o numero de lancamentos\n");
+	scanf ("%i", &lancamentos);
+	
+	printf ("\n");
+
+	srand(time(NULL));
+	for (i=1; i <=lancamentos; i++)
+	{
+		d1 = rand() % 9 + 1; 
+		d2 = rand() % 9 + 1;
+		
+		printf("Lancamento %i:\n D1:%i\n D2:%i\n", i, d1, d2);
+
+		if (d1>d2)
+		{
+			printf ("D1 e maior que D2");
+			return 0;
+		}
+		else if (d1<d2)
+		{
+			printf ("D1 e menor que D2");
+			return 0;
+		}
+		else
+		{
+			printf ("D1 e igual a D2");
+			return 0;
+		}
+	}
+}
+
+//Exercício 14
