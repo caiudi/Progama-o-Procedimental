@@ -319,3 +319,38 @@ main()
 
 //Exercício 15
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int 
+main()
+{
+	float numero, quadrado, cubo, raiz;
+	
+	while (numero>0)
+	{
+		printf ("Digite valores, e para finalizar digite um numero nao positivo\n");
+		scanf ("%f", &numero);
+	
+		if (numero>0);
+		{
+			quadrado = pow(numero,2);
+			cubo = pow(numero, 3);
+			raiz = sqrt(numero);
+
+			printf ("O quadrado do numero e: %.2f\n", quadrado);
+
+			printf ("\n");
+
+			printf ("O cubo do numero e: %.2f\n", cubo);
+
+			printf ("\n");
+
+			printf ("A raiz do numero e: %.2f\n", raiz);
+		}
+	}
+}
+
+//Exercício 16
+
+
