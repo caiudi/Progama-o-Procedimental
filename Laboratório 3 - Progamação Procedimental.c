@@ -353,4 +353,58 @@ main()
 
 //Exercício 16
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int 
+main()
+{
+	int numero;
+	float adicao, subtracao, multiplicacao, divisao, n1, n2;
+	
+	do
+	{
+	printf ("Escolha uma opcao:\n\n0 - Saida\n1 - Adicao\n2 - Subtracao\n3 - Multiplicacao\n4 - Divisao\n");
+	scanf ("%i", &numero);
 
+	switch (numero)
+	{
+	case 0:
+	    printf ("Saida selecionada");
+		break;
+	case 1:
+	    printf ("Adicao selecionada\nDigite 2 numeros\n");
+		scanf ("%f%f", &n1, &n2);
+		adicao = n1+n2;
+		printf ("O resultado da soma e: %.2f\n", adicao);
+		break;
+	case 2:
+	    printf ("Subtracao selecionada\nDigite 2 numeros\n");
+		scanf ("%f%f", &n1, &n2);
+		subtracao = n1-n2;
+		printf ("O resultado da subtracao e: %.2f\n", subtracao);
+		break;
+	case 3:
+	    printf ("Multiplicacao selecionada\nDigite 2 numeros\n");
+		scanf ("%f%f", &n1, &n2);
+		multiplicacao = n1*n2;
+		printf ("O resultado da soma e: %.2f\n", multiplicacao);
+		break;
+	case 4:
+	    printf ("Divisao selecionada\nDigite 2 numeros, sendo o segundo diferente de 0\n");
+		scanf ("%f%f", &n1, &n2);
+		if (n2==0)
+		{
+			printf ("Numero invalido, digite outro");
+			scanf ("%f", &n2);
+		}
+		else 
+		divisao = n1/n2;
+		printf ("O resultado da divisao e: %.2f\n", divisao);
+		break;
+	}
+}
+while (numero!=0);
+}
+
+//Exercício 17
