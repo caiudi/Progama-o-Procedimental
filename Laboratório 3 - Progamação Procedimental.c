@@ -204,6 +204,23 @@ main()
 
 //Exercício 10
 
+#include <stdio.h>
+
+int 
+main()
+{
+	int i, soma=0;
+	for (i=2; i<=50; i++)
+	{
+		if(i%2==0)
+		{
+		printf ("%i - ", i);
+		soma +=i;
+		}
+	}
+	printf ("A soma e: %i", soma);
+}
+
 //Exercício 11
 
 #include <stdio.h>
