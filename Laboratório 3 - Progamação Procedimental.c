@@ -432,21 +432,24 @@ main()
 //Exercício 18
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#define anoatual 2023
-int 
-main()
-{
-    double salario=2000;
-    float aumento=0.015;
-    int ano=1996;
-    for (ano=1996; ano<=anoatual; ano++)
-    {
-        salario = salario*aumento;
-        aumento = aumento*2;
-    }
-    printf ("%.2lf", salario);
+
+int main(){
+
+	int ano;
+	float aumento = 1.5;
+    double salario = 2000; 
+	
+	for(ano = 1996; ano <= 2023; ano ++){
+		salario = salario*(1 + (aumento/100));
+		aumento = aumento*2;
+
+		printf("Salario no ano de %d: %.2f\n", ano, salario); 
+	}
+	return 0;
 }
+
+//Exercício 19
+
+
 
 
