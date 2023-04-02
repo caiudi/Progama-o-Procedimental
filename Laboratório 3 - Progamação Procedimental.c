@@ -408,3 +408,25 @@ while (numero!=0);
 }
 
 //Exercício 17
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int 
+main()
+{
+	float chico=1.5, ze = 1.1;
+    int ano=0;
+    while (chico>=ze)
+    {
+        ze += 0.03;
+
+        chico += 0.02;
+
+        ano ++;
+    }
+    printf ("Serao necessarios %i anos", ano);
+    return 0;
+}
+
+//Exercício 18
