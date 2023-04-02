@@ -450,6 +450,30 @@ int main(){
 
 //Exercício 19
 
+#include <stdio.h>
 
+int main(){
+
+    int saque;
+    printf ("Digite o valor do saque:\n");
+    scanf ("%i", &saque);
+
+    printf ("%i notas de 100\n", saque/100);
+    saque = saque%100;
+    printf ("%i notas de 50\n", saque/50);
+    saque = saque%50;
+    printf ("%i notas de 20\n", saque/20);
+    saque = saque%20;
+    printf ("%i notas de 10\n", saque/10);
+    saque = saque%10;
+    printf ("%i notas de 5\n", saque/5);
+    saque = saque%5;
+    printf ("%i notas de 2\n", saque/2);
+    saque = saque%2;
+    printf ("%i notas de 1\n", saque/1);
+    saque = saque%1;
+}
+
+//Exercício 20
 
 
