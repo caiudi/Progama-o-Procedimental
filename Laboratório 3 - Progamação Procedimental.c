@@ -508,5 +508,40 @@ int main()
 
 //Exercício 21
 
+#include <stdio.h>
+#include <math.h>
+int 
+main()
+{
+    int i1, i2, numero1, numero2, contador=0, primo;
+
+    printf ("Digite um numero\n");
+    scanf ("%i", &numero1);
+
+    printf ("DIgite outro numero\n");
+    scanf ("%i", &numero2);
+
+    for (i1=numero1; i1<=numero2; i1++)
+    {
+        primo=1;
+        for (i1=2; i2<=(i1/2); i2++)
+        {
+            if(i1%i1==0)
+            {
+                primo=0;
+                break;
+            }
+        }
+       if(primo && i1 > 1)
+        {
+		contador++;
+        }
+    }
+    printf ("Existem %i numeros primos nesse intervalor\n", contador);
+    return 0;
+}
+
+//Exercício 22
+
 
 
