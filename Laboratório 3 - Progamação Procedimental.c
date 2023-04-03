@@ -544,5 +544,26 @@ int main()
 
 //Exercício 22
 
+//Exercício 23
+
+#include <stdio.h>
+int
+main()
+{
+    int i, j, c=0, numero;
+    printf ("Digite um numero\n");
+    scanf ("%i", &numero);
+
+    for (i=1 ; i<=numero ; i++)
+    {
+        for (j=1 ; j<=i ; j++)
+        {  
+            c++;
+            printf ("%i", c);
+        }
+        printf ("\n");
+    }
+    return 0;
+}
 
 
