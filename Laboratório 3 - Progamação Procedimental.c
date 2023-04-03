@@ -509,36 +509,37 @@ int main()
 //Exercício 21
 
 #include <stdio.h>
-#include <math.h>
-int 
-main()
+
+int main()
 {
-    int i1, i2, numero1, numero2, contador=0, primo;
+	int a, b, i1, i2, primo, contador = 0;
 
-    printf ("Digite um numero\n");
-    scanf ("%i", &numero1);
+	printf("Digite um numero");
+	scanf("%i", &a);
 
-    printf ("DIgite outro numero\n");
-    scanf ("%i", &numero2);
-
-    for (i1=numero1; i1<=numero2; i1++)
+	printf("Digite outro numero");
+	scanf("%i", &b);
+    
+	for(i1 = a; i1 <= b; i1 ++)
     {
-        primo=1;
-        for (i1=2; i2<=(i1/2); i2++)
+		primo = 1;
+		for(i2 = 2; i2 <= i1/2; i2 ++)
         {
-            if(i1%i1==0)
+			if(i1 % i2 == 0)
             {
-                primo=0;
-                break;
-            }
-        }
-       if(primo && i1 > 1)
+				primo= 0;
+				break;
+			}
+		}
+		if(primo && i1 > 1)
         {
-		contador++;
-        }
-    }
-    printf ("Existem %i numeros primos nesse intervalor\n", contador);
-    return 0;
+			contador ++;
+		}
+	}
+
+	printf("\nExistem %d Numeros Primos no Intervalo %d e %d", contador, a, b);
+
+	return 0;
 }
 
 //Exercício 22
