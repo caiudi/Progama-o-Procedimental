@@ -476,4 +476,37 @@ int main(){
 
 //Exercício 20
 
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int i1, i2, numero;
+    float somatotal=2;
+
+    for (i1 = 3; i1 <= 2000000; i1 += 2) 
+    {
+        numero = 1;
+        for (i2 = 3; i2 <= sqrt(i1); i2 += 2) 
+        {
+            if (i1 % i2 == 0) 
+            {
+                numero = 0;
+                break;
+            }
+        }
+
+        if (numero) 
+        {
+            somatotal += i1;
+        }
+    }
+
+    printf("A soma e: %.0f\n", somatotal);
+
+    return 0;
+}
+
+//Exercício 21
+
+
 
