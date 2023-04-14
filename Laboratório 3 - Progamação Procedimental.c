@@ -544,6 +544,55 @@ int main()
 
 //Exercício 22
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int m, i,j, m1 = 0, digitos = 0, temp, inverso, cifra, fator, fator2, multiplicacao;
+
+
+    for (j = 100; j <= 999; j++) 
+    {
+        for (i = 100; i <= 999; i++) 
+        {
+            multiplicacao = i * j;
+
+            if(multiplicacao > m1)
+            {
+                temp = multiplicacao;
+                while (temp != 0) 
+                {
+                    digitos++;
+                    temp /= 10;
+                }
+            }
+
+            temp = multiplicacao;
+                inverso = 0;
+                while(temp != 0) 
+                {
+                    cifra = temp % 10;
+                    inverso += cifra * pow(10, digitos - 1);
+                    temp /= 10;
+                    digitos--;
+                }
+
+            if (multiplicacao == inverso) 
+            {
+                    m1 = inverso;
+                    fator = j;
+                    fator2 = i;
+            }
+
+        }
+}
+    printf("O maior palindromo formado pela multiplicacao de %d e %d e %d\n", fator, fator2, m1);
+
+    return 0;
+}
+
 //Exercício 23
 
 #include <stdio.h>
