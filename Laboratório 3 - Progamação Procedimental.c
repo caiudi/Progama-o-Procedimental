@@ -550,7 +550,7 @@ int main()
 
 int main()
 {
-    int m, i,j, m1 = 0, digitos = 0, temp, inverso, cifra, fator, fator2, multiplicacao;
+    int i,j, m1 = 0, digitos = 0, temp, inverso, cifra, fator, fator2, multiplicacao;
 
 
     for (j = 100; j <= 999; j++) 
