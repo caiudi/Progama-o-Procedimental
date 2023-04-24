@@ -180,3 +180,39 @@ main()
 
 //Exercício 6
 
+#include <stdio.h>
+#include <math.h>
+
+int Conversor_Segundos(int horas, int minutos, int segundos)
+{
+  int resultado;
+  resultado = (horas*3600) + (minutos*60) + segundos;
+  return resultado;
+}
+
+int
+main()
+{
+  int horas, minutos, segundos;
+  printf ("Digite as horas: ");
+  scanf ("%i", &horas);
+
+  printf ("\n");
+
+  printf ("Digite os minutos: ");
+  scanf ("%i", &minutos);
+
+  printf ("\n");
+
+  printf ("Digite os segundos: ");
+  scanf ("%i", &segundos);
+
+  printf ("\n");
+
+  printf ("O resultado em segundos e: %i", Conversor_Segundos(horas, minutos, segundos));
+  return 0;
+}
+
+//Exercício 7
+
+
