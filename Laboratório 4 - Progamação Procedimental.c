@@ -215,4 +215,28 @@ main()
 
 //Exercício 7
 
+#include <stdio.h>
+#include <math.h>
+
+float 
+Conversor_Fahrenheit(float x)
+{
+  int conversao;
+  conversao = x*(9.0/5.0)+32.0;
+  return conversao;
+}
+
+int 
+main()
+{
+  int num;
+  printf ("Digite um valor de temperatura em Celcius: ");
+  scanf ("%i", &num);
+
+  printf ("A conversao em Fahrenheit e: %.2f", Conversor_Fahrenheit(num));
+  return 0;
+}
+
+//Exercício 8
+
 
