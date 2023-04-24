@@ -239,4 +239,29 @@ main()
 
 //Exercício 8
 
+#include <stdio.h>
+#include <math.h>
+
+ float 
+ Calculo_Hipotenusa(int a, int b)
+ {
+  int hipotenusa;
+  hipotenusa = sqrt(pow(a,2)+pow(b,2));
+  return hipotenusa;
+ }
+
+ int
+ main()
+ {
+  int a, b;
+  printf ("Digite os valores dos catetos: ");
+  scanf ("%i %i", &a, &b);
+
+  printf ("\n");
+
+  printf ("O Valor da hipotenusa e: %.2f", Calculo_Hipotenusa(a, b));
+  return 0;
+ }
+
+//Exercício 9
 
