@@ -295,3 +295,41 @@ main()
 }
 
 //Exercício 10
+
+#include <stdio.h>
+#include <math.h>
+
+int
+Verificar_Maior(int x, int y)
+{
+  if (x>y)
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+int
+main()
+{
+  int x, y, resultado;
+  printf ("Digite 2 numeros: ");
+  scanf ("%i %i", &x, &y);
+
+  printf ("\n");
+
+  resultado = Verificar_Maior(x, y);
+  
+  if (resultado==1)
+  {
+    printf ("O numero %i e maior que o %i", x, y);
+  } 
+  else
+  {
+    printf ("O numero %i e maior que o %i", y, x);
+  }
+return 0;
+}
+
