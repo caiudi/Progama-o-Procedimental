@@ -112,3 +112,44 @@ int main() {
 }
 
 //Exercício 4
+
+#include <stdio.h>
+#include <math.h>
+
+int verificador(int x)
+{
+  int raiz;
+  raiz = sqrt(x);
+  if (pow(raiz,2)==x)
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
+int 
+main ()
+{
+  int num, retorno;
+  printf ("Digite um numero: \n");
+  scanf ("%i", &num);
+
+  printf ("\n");
+
+  retorno = verificador(num);
+
+  if (retorno==1)
+  {
+    printf ("O numero %i e um quadrado perfeito", num);
+  }
+  else
+  {
+    printf ("O numero %i nao e um quadrado perfeito", num);
+  }
+  return 0;
+}
+
+//Exercício 5
