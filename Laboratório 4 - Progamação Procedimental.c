@@ -79,3 +79,36 @@ dataext(int dia, int mes, int ano)
 }
 
 //Exercício 3
+
+#include <stdio.h>
+
+int verificador(int x) {
+    if(x > 0) {
+        return 1; 
+    } else if(x < 0) {
+        return -1; 
+    } else {
+        return 0;
+    }
+}
+
+int main() {
+    int num, resultado;
+    printf("Digite um numero");
+    scanf("%i", &num);
+
+    printf ("\n");
+    
+    resultado = verificador(num);
+
+    if(resultado == 1) {
+        printf("O numero digitado e positivo");
+    } else if(resultado == -1) {
+        printf("O numero digitado e negativo");
+    } else {
+        printf(" numero digitado e igual a zero");
+    }
+    return 0;
+}
+
+//Exercício 4
