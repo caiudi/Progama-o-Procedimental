@@ -153,3 +153,30 @@ main ()
 }
 
 //Exercício 5
+
+#include <stdio.h>
+#include <math.h>
+#define pi 3.14
+
+float Volume_Esfera(int x)
+{
+  int volume;
+  volume = 4/3*pi*pow(x,3);
+  return volume;
+}
+
+int
+main()
+{
+  int r;
+  printf ("Digite o valor do raio: ");
+  scanf ("%i", &r);
+
+  printf ("\n");
+
+  printf ("O volume da esfera e: %.2f ", Volume_Esfera(r));
+  return 0;
+}
+
+//Exercício 6
+
