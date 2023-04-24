@@ -265,3 +265,33 @@ main()
 
 //Exercício 9
 
+#include <stdio.h>
+#include <math.h>
+#define pi 3.1415
+
+float
+Calculo_Volume_Cilindro(int altura, int raio)
+{
+  float volume;
+  volume = pi * pow(raio,2) * altura;
+  return volume;
+}
+int 
+main()
+{
+  int altura, raio;
+  printf ("Digite a altura do cilindro: ");
+  scanf ("%i", &altura);
+
+  printf ("\n");
+
+  printf ("Digite o raio do cilindro: ");
+  scanf ("%i", &raio);
+
+  printf ("\n");
+
+  printf ("O volume do cilindro e: %.2f", Calculo_Volume_Cilindro(altura, raio));
+  return 0;
+}
+
+//Exercício 10
