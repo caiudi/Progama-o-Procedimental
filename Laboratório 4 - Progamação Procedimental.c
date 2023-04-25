@@ -333,3 +333,52 @@ main()
 return 0;
 }
 
+//Exercício 11
+
+#include <stdio.h>
+
+int 
+Calculadora_Media(int a, int b, int c, char d)
+{
+  float media;
+  if (d == 'A' || d == 'a')
+  {
+    media = (a+b+c)/3;
+    printf ("A media aritmetica das notas e: %.2f", media);
+  }
+  if (d == 'P' || d == 'p')
+  {
+    media = (a*5)+(b*3)+(c*2)/10;
+    printf ("A media ponderada das notas e: %.2f", media);
+  }
+}
+
+int
+main()
+{
+  int nota1, nota2, nota3;
+  char d;
+  printf ("Digite a primeira nota: ");
+  scanf ("%d", &nota1);
+
+  printf ("\n");
+  
+  printf ("Digite a segunda nota: ");
+  scanf ("%d", &nota2);
+
+  printf ("\n");
+  
+  printf ("Digite a terceira nota: ");
+  scanf ("%d", &nota3);
+
+  printf ("\n");
+
+  printf ("Digite A para calcular a media aritmetica ou P para calcular a media ponderada: ");
+  scanf ("%s", &d);
+
+  Calculadora_Media(nota1, nota2, nota3, d);
+
+}
+
+//Exercício 12
+
