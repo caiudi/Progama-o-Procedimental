@@ -70,7 +70,7 @@ dataext(int dia, int mes, int ano)
   printf ("%i de Agosto de %i", dia, ano);
   if (mes==9)
   printf ("%i de Setembro de %i", dia, ano);
-  if (mes=10) 
+  if (mes==10) 
   printf ("%i de Outubro de %i", dia, ano);
   if (mes==11) 
   printf ("%i de Novembro de %i", dia, ano);
