@@ -469,3 +469,47 @@ main()
 }
 
 //Exercício 14
+
+#include <stdio.h>
+
+int 
+Consumo_Gasolina(int x, int y)
+{
+  float consumo;
+  consumo = x/y;
+  return consumo;
+}
+
+int
+main()
+{
+  int km, litros;
+  float consumo;
+  printf ("Digite os KM percorridos: ");
+  scanf ("%i", &km);
+
+  printf ("\n");
+
+  printf ("Digite os litros consumidos: ");
+  scanf ("%i", &litros);
+
+  printf ("\n");
+
+  consumo = Consumo_Gasolina(km, litros);
+  
+  if (consumo < 8)
+  {
+    printf ("Venda o Carro!");
+  }
+  if (consumo > 8 && consumo < 14)
+  {
+    printf ("Economico!");
+  }
+  if (consumo > 14)
+  {
+    printf ("Super Economico!");
+  }
+  return 0;
+}
+
+//Exercício 15
