@@ -417,3 +417,67 @@ main()
 
 //Exercício 13
 
+#include <stdio.h>
+
+int
+Operacoes(int x, int y, char a)
+{
+  int adicao=0, subtracao, multiplicacao;
+  float divisao;
+  if (a == '+')
+  {
+    adicao = x+y;
+    printf ("A soma dos numeros e: %i", adicao);
+  }
+  if (a == '-')
+  {
+    subtracao = x-y;
+    printf ("A diferenca dos numeros e: %i", subtracao);
+  }
+  if (a == '*')
+  {
+    multiplicacao = a*y;
+    printf ("A multiplicacao dos numeros e: %i", multiplicacao);
+  }
+  if (a == '/')
+  {
+    if(y==0)
+    {
+      printf ("Numero invalido, digite novamente");
+      scanf ("%i", &y);
+      divisao = x/y;
+      printf ("O resultado da divisao e: %.2f", divisao);
+    }
+    else
+    {
+      divisao = x/y;
+      printf ("O resultado da divisao e: %.2f", divisao);
+    }
+  }
+}
+
+int
+main()
+{
+  int num1, num2;
+  char a;
+
+  printf ("Digite o primeiro numero: ");
+  scanf ("%i", &num1);
+
+  printf ("\n");
+
+  printf ("Digite o segundo numero: ");
+  scanf ("%i", &num2);
+
+  printf ("\n");
+
+  printf ("Selecione a sua operacao\n\n+ : Adicao\n- : Subtracao\n* : Multiplicacao\n/ : Divisao\n");
+  scanf ("%c", &a);
+  
+  Operacoes(num1, num2, a);
+
+  return 0;
+}
+
+//Exercício 14
