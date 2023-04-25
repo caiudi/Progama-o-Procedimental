@@ -419,47 +419,34 @@ main()
 
 #include <stdio.h>
 
-int
-Operacoes(int x, int y, char a)
+float 
+Operacoes(float x, float y, char operacao) 
 {
-  int adicao=0, subtracao, multiplicacao;
-  float divisao;
-  if (a == '+')
-  {
-    adicao = x+y;
-    printf ("A soma dos numeros e: %i", adicao);
-  }
-  if (a == '-')
-  {
-    subtracao = x-y;
-    printf ("A diferenca dos numeros e: %i", subtracao);
-  }
-  if (a == '*')
-  {
-    multiplicacao = a*y;
-    printf ("A multiplicacao dos numeros e: %i", multiplicacao);
-  }
-  if (a == '/')
-  {
-    if(y==0)
+    float resultado;
+    switch(operacao) 
     {
-      printf ("Numero invalido, digite novamente");
-      scanf ("%i", &y);
-      divisao = x/y;
-      printf ("O resultado da divisao e: %.2f", divisao);
+        case '+':
+            resultado = x + y;
+            break;
+        case '-':
+            resultado = x - y;
+            break;
+        case '*':
+            resultado = x * y;
+            break;
+        case '/':
+            resultado = x / y;
+            break;
+        default:
+            printf("Operacao invalida\n");
     }
-    else
-    {
-      divisao = x/y;
-      printf ("O resultado da divisao e: %.2f", divisao);
-    }
-  }
+    return resultado;
 }
 
 int
 main()
 {
-  int num1, num2;
+  int num1, num2, resultado;
   char a;
 
   printf ("Digite o primeiro numero: ");
@@ -475,7 +462,8 @@ main()
   printf ("Selecione a sua operacao\n\n+ : Adicao\n- : Subtracao\n* : Multiplicacao\n/ : Divisao\n");
   scanf ("%c", &a);
   
-  Operacoes(num1, num2, a);
+  resultado = Operacoes(num1, num2, a);
+  printf ("O resultado e: %i", resultado);
 
   return 0;
 }
