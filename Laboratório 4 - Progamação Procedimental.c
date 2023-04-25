@@ -382,3 +382,38 @@ main()
 
 //Exercício 12
 
+#include <stdio.h>
+
+int
+Soma_Algarismos(int a)
+{
+  int soma=0;
+  if (a>0)
+  {
+    while (a>0)
+    {
+      soma = soma + a%10;
+      a=a/10;
+    }
+    printf ("A soma dos numeros e: %i", soma);
+  }
+  else
+  {
+    printf ("O numero e invalido");
+  }
+}
+
+int 
+main()
+{
+  int num;
+  printf ("Digite um numero: ");
+  scanf ("%i", &num);
+
+  Soma_Algarismos(num);
+  
+  return 0;
+}
+
+//Exercício 13
+
