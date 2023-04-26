@@ -695,3 +695,49 @@ main()
 }
 
 //Exercício 20
+
+#include <stdio.h>
+#include <math.h>
+
+int
+Verifica_Primo(int x)
+{
+  int i, j, contador = 1, e_primo;
+  
+  for ( i = 3 ; i < x ; i += 2)
+  {
+    e_primo=1;
+    
+    for (j = 3 ; j <= sqrt(x) ; j += 2)
+    {
+      if (i % j == 0)
+      {
+        e_primo = 0;
+        break;
+      }
+    }
+  if (e_primo == 1)
+  {
+    contador++;
+  }
+  }
+  return contador;
+}
+
+int
+main()
+{
+  int num1;
+
+  printf ("Digite um numero: ");
+  scanf ("%i", &num1);
+
+  printf ("\n");
+
+  printf ("A quantidade de numeros primos abaixo de %i eh %i", num1, Verifica_Primo(num1));
+
+  return 0;
+}
+
+//Exercício 21
+
