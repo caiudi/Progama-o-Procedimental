@@ -566,3 +566,32 @@ main()
 }
 
 //Exercício 16
+
+#include <stdio.h>
+
+int
+Desenha_Linha(int x)
+{
+  int i;
+  for(i = 0; i < x; i++)
+  {
+    printf ("=");
+  }
+}
+
+int
+main()
+{
+  int quantidade;
+  printf ("Digite um numero: ");
+  scanf ("%i", &quantidade);
+
+  printf ("\n");
+
+  Desenha_Linha(quantidade);
+
+  return 0;
+}
+
+//Exercício 17
+
