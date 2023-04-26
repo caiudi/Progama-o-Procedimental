@@ -741,3 +741,38 @@ main()
 
 //Exercício 21
 
+#include <stdio.h>
+  #include <math.h>
+
+  int
+  Construtor_Meia_Piramide(int x)
+  {
+    int i, j;
+
+    for (i = 0 ; i < x ; i++)
+    {
+      for (j = 0 ; j <= i ; j++)
+      {
+        printf ("!");
+      }
+      printf ("\n");
+    }
+  }
+
+  int
+  main()
+  {
+    int num1;
+    
+    printf ("Digite um numero: ");
+    scanf ("%i", &num1);
+
+    printf ("\n");
+
+    Construtor_Meia_Piramide(num1);
+
+    return 0;
+  }
+
+//Exercício 22
+
