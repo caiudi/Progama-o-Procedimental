@@ -665,3 +665,33 @@ main()
 
 //Exercício 19
 
+#include <stdio.h>
+
+int
+Fatorial(int x)
+{
+  int i, fat = 1;
+  
+  for (i = x ; i > 1 ; i--)
+  {
+    fat *= i;
+  }
+  return fat;
+}
+
+int
+main()
+{
+  int num1;
+  
+  printf ("Digite um numero: ");
+  scanf ("%i", &num1);
+
+  printf ("\n");
+
+  printf ("O fatorial de %i eh %i", num1, Fatorial(num1));
+
+  return 0;
+}
+
+//Exercício 20
