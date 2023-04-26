@@ -776,3 +776,47 @@ main()
 
 //Exercício 22
 
+#include <stdio.h>
+
+int
+Gerar_Triangulo(int x)
+{
+    int i, j;
+
+    for (i = 1; i <= 2*x-1 ; i++)
+    {
+        if (i <= x)
+        {
+            for ( j = 1 ; j <= i ; j++)
+            {
+                printf ("*");
+            }
+        }
+        else
+        {
+            for ( j = 1 ; j <= 2*x-i ; j++)
+            {
+                printf ("*");
+            }
+        }
+        printf ("\n");
+    }
+}
+
+int
+main()
+{
+    int num1;
+
+    printf ("Digite um numero: ");
+    scanf ("%i", &num1);
+
+    printf ("\n");
+
+    Gerar_Triangulo(num1);
+
+    return 0;
+}
+
+//Exercício 23
+
