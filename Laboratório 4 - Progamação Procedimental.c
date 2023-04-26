@@ -513,3 +513,56 @@ main()
 }
 
 //Exercício 15
+
+#include <stdio.h>
+
+int 
+Verificar_Triangulo(int x, int y, int z)
+{
+  if (x+y > z && x+z > y && z+y > x)
+  {
+    printf ("Os valores formam um triangulo!\n");
+    return 1;
+  }
+  else
+  {
+    printf ("Os valores nao formam um triangulo!");
+    return 0;
+  }
+}
+
+int
+Verificar_Tipo_Triangulo(int x, int y, int z)
+{
+  if (x == y && y == z)
+  {
+    printf ("Alem do mais, um Triangulo Equilatero!\n");
+  }
+  else if (x == y || x == z || y == z)
+  {
+    printf ("Alem do mais, um Triangulo isosceles!\n");
+  }
+  else 
+  {
+    printf ("Alem do mais, um Triangulo Escaleno!\n");
+  }
+}
+
+int 
+main()
+{
+  int lado1, lado2, lado3;
+
+  printf ("Digite 3 numeros para comprimento de um triangulo: ");
+  scanf ("%i%i%i", &lado1, &lado2, &lado3);
+
+  printf ("\n");
+
+  if (Verificar_Triangulo(lado1, lado2, lado3))
+  {
+    Verificar_Tipo_Triangulo(lado1, lado2, lado3);
+  }
+  return 0;
+}
+
+//Exercício 16
