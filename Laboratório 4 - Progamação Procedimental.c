@@ -595,3 +595,36 @@ main()
 
 //Exercício 17
 
+#include <stdio.h>
+
+int
+Soma_Numeros_Entre(int x, int y)
+{
+  int i, soma=0;
+  for (i = x ; i < y ; i++)
+  {
+    soma+=i;
+  }
+return soma;
+}
+
+int
+main()
+{
+  int num1, num2, resultado;
+  printf ("Digite o primeiro numero: ");
+  scanf ("%i", &num1);
+
+  printf ("\n");
+
+  printf ("Digite o segundo numero: ");
+  scanf ("%i", &num2);
+
+  printf ("\n");
+
+  printf ("A soma dos numeros existentes entre %i e %i eh igual a: %i", num1, num2, Soma_Numeros_Entre(num1, num2));
+  
+  return 0;
+}
+
+//Exercício 18
