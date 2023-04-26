@@ -628,3 +628,40 @@ main()
 }
 
 //Exercício 18
+
+#include <stdio.h>
+
+int
+Exponeciacao(int x, int y)
+{
+  int i, resultado=1;
+  
+  for (i = 0 ; i < y ; i++)
+  {
+    resultado *= x;
+  } 
+  return resultado;
+}
+
+int 
+main()
+{
+  int num1, num2;
+  
+  printf ("Digite o primeiro numero: ");
+  scanf ("%i", &num1);
+
+  printf ("\n");
+
+  printf ("Digite o segundo numero: ");
+  scanf ("%i", &num2);
+
+  printf ("\n");
+
+  printf ("O numero %i elevado a %i eh igual a %i", num1, num2, Exponeciacao(num1, num2));
+
+  return 0;  
+}
+
+//Exercício 19
+
