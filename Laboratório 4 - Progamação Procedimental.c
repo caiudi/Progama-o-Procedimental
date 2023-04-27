@@ -820,3 +820,37 @@ main()
 
 //Exercício 23
 
+#include <stdio.h>
+
+int
+Construtor_De_Piramides(int x)
+{
+    int i, j, k;
+
+    for ( i = 1 ; i<= x ; i++)
+    {
+        for ( j = 1 ; j <= x-i ; j++)
+        {
+            printf (" ");
+        }
+        for ( k = 1 ; k <= (2*i-1) ; k++)
+        {
+            printf ("*");
+        }
+        printf ("\n");
+    }
+}
+
+int
+main()
+{
+    int num1;
+
+    printf ("Digite um numero: ");
+    scanf ("%i", &num1);
+
+    Construtor_De_Piramides(num1);
+    
+    return 0;
+}
+
