@@ -25,3 +25,35 @@ int main()
 }
 
 //Exercício 2
+
+#include <stdio.h>
+
+int main()
+{
+    int vet[8];
+    int x, y, i, soma;
+
+    printf ("Digite os valores do vetor: ");
+    for ( i = 0 ; i < 8 ; i++)
+    {
+        scanf ("%i", &vet[i]);
+    }
+
+    printf ("\n");
+
+    printf ("Digite duas posicoes: ");
+    scanf ("%i %i", &x, &y);
+
+    printf ("\n");
+
+    if (x > 0 || x <= 7 || y > 0 || y <= 7)
+    {
+        soma = vet[x]+vet[y];
+        printf ("A soma dos valores nas posicoes %i e %i eh %i", x, y, soma);
+    }
+    else
+    {
+        printf ("Posicoes invalidas");
+    }
+    return 0;
+}
