@@ -84,3 +84,37 @@ main()
 }
 
 //Exercício 4
+
+#include <stdio.h>
+
+int
+main()
+{
+    int vet[5];
+    int maior = vet[0], menor = vet[0];
+    int posicao_maior = 0 , posicao_menor = 0;
+    int i;
+
+    for (i = 0 ; i < 5 ; i++);
+    {
+        printf ("Digite um valor inteiro: ");
+        scanf ("%i\n", &vet[i]);
+
+        if ( vet[i] > maior )
+        {
+            maior = vet[i];
+            posicao_maior = i;
+        }
+        if ( vet[i] < menor)
+        {
+            menor = vet[i];
+            posicao_menor = i;
+        }  
+    } 
+    
+    printf ("A posicao com o maior valor eh %i, e a com o menor valor e %i\n", posicao_maior, posicao_menor);
+
+    return 0;
+}
+
+//Exercício 5
