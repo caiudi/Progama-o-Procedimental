@@ -95,7 +95,7 @@ main()
     int posicao_maior = 0 , posicao_menor = 0;
     int i;
 
-    for (i = 0 ; i < 5 ; i++);
+    for (i = 0 ; i < 5 ; i++)
     {
         printf ("Digite um valor inteiro: ");
         scanf ("%i\n", &vet[i]);
