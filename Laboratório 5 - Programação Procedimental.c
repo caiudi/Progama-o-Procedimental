@@ -136,3 +136,53 @@ main()
 }
 
 //Exercício 6
+
+#include <stdio.h>
+
+int
+Eh_Primo(int x)
+{
+    int i;
+
+    if (x <= 1)
+    {
+        return 0;
+    }
+
+    for (i = 2 ; i <= x/2 ; i++)
+    {
+        if (x % i == 0)
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+
+int
+main()
+{
+    int vet[10];
+    int i;
+
+    for (i = 0 ; i < 10 ; i++)
+    {
+        printf ("Digite um valor: ");
+        scanf ("%i", &vet[i]);
+    }
+
+    for (i = 0 ; i < 10; i++)
+    {
+        if(Eh_Primo(vet[i]))
+        {
+            printf ("O numero: %i eh primo, e esta na posicao %i\n", vet[i], i);
+        }
+    }
+
+    return 0;
+}
+
+//Exercício 7
+
+
