@@ -59,3 +59,28 @@ int main()
 }
 
 //Exercício 3
+
+#include <stdio.h>
+
+int
+main()
+{
+    int vet[6];
+    int i, j;
+
+    for (i = 0 ; i < 6 ; i++)
+    {
+        printf ("Digite um valor inteiro: ");
+        scanf ("%i", &vet[i]);
+    }
+
+    for (j = 5 ; j != 0 ; j--)
+    {
+        printf ("%i\n", vet[j]);
+    }
+    printf ("%i\n", vet[0]);
+
+    return 0;
+}
+
+//Exercício 4
