@@ -261,3 +261,35 @@ int main() {
 }
 
 //Exercício 9
+
+#include <stdio.h>
+
+int
+main()
+{
+    int Matriz[4][4];
+    int contador = 0;
+    int i, j;
+
+    printf ("Digite os elementos da matriz 4x4: ");
+
+    printf ("\n");
+
+    for ( i = 0 ; i < 4 ; i++)
+    {
+        for ( j = 0 ; j < 4 ; j++)
+        {
+            scanf ("%i", &Matriz[i][j]);
+            if (Matriz[i][j] > 10)
+            {
+                contador++;
+            }
+        }
+    }
+
+    printf ("Essa matriz possui %i numeros maiores que 10", contador);
+
+    return 0;
+}
+
+//Exercício 10
