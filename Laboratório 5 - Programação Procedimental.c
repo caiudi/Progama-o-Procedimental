@@ -221,3 +221,43 @@ main()
 }
 
 //Exercício 8
+
+#include <stdio.h>
+
+int main() {
+    int numeros[10];
+    int i, j; 
+    int num;
+    
+    printf("Digite 10 numeros diferentes: ");
+
+    printf ("\n");
+
+    for(i = 0; i < 10; i++) 
+    {
+        do 
+        {
+            scanf("%d", &num);
+            for(j = 0; j < i; j++) 
+            {
+                if(numeros[j] == num) 
+                {
+                    printf("Numero ja digitado. Digite outro: ");
+                    num = -1;
+                    break;
+                }
+            }
+        } 
+        while(num == -1);
+        numeros[i] = num;
+    }
+    printf("Vetor final: ");
+    for(i = 0; i < 10; i++) 
+    {
+        printf("%d ", numeros[i]);
+    }
+    printf("\n");
+    return 0;
+}
+
+//Exercício 9
