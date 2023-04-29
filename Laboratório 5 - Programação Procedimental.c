@@ -188,4 +188,36 @@ main()
 
 //Exercício 7
 
+#include <stdio.h>
 
+int
+main()
+{
+    int vet[6];
+    int i;
+    int soma = 0, quantidadeimpar = 0;
+
+    for (i = 0 ; i < 6 ; i++)
+    {
+        printf ("Digite um numero: ");
+        scanf ("%i", &vet[i]);
+
+        if ( vet[i] % 2 == 0)
+        {
+            printf ("O numero %i eh par\n", vet[i]);
+            soma += vet[i];
+        }
+        else
+        {
+            printf ("O numero %i eh impar\n", vet[i]);
+            quantidadeimpar++;
+        }
+    }
+
+    printf ("A soma dos numeros pares eh %i\n", soma);
+    printf ("A quantidade de impares eh %i\n", quantidadeimpar);
+
+    return 0; 
+}
+
+//Exercício 8
