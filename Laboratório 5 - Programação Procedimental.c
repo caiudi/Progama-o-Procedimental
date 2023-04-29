@@ -91,7 +91,7 @@ int
 main()
 {
     int vet[5];
-    int maior = vet[0], menor = vet[0];
+    int maior , menor;
     int posicao_maior = 0 , posicao_menor = 0;
     int i;
 
@@ -99,6 +99,9 @@ main()
     {
         printf ("Digite um valor inteiro: ");
         scanf ("%i\n", &vet[i]);
+        
+        maior = vet[0];
+        menor = vet[0];
 
         if ( vet[i] > maior )
         {
