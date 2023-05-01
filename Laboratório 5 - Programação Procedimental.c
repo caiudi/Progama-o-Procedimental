@@ -293,3 +293,38 @@ main()
 }
 
 //Exercício 10
+
+#include <stdio.h>
+
+int
+main()
+{
+    int Matriz[5][5];
+    int i, j;
+
+    for (i = 0 ; i < 5 ; i++)
+    {
+        for (j = 0 ; j < 5 ; j++)
+        {
+            if (i==j)
+            {
+                Matriz[i][j] = 1;
+            }
+            else
+            {
+                Matriz[i][j] = 0;
+            }
+        }
+    }
+
+    for (i = 0 ; i < 5 ; i++)
+    {
+        for (j = 0 ; j < 5 ; j++)
+        {
+            printf ("%i", Matriz[i][j]);
+        }
+        printf ("\n");
+    }
+}
+
+//Exercício 11
