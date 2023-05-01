@@ -372,4 +372,53 @@ main()
 
 //Exercício 12
 
+#include <stdio.h>
+
+int
+main()
+{
+    int Matriz[5][5];
+    int i, j;
+    int x;
+    int linha, coluna, encontrado;
+
+    printf ("Digite os numeros da Matriz: ");
+
+    for (i = 0 ; i < 5 ; i++)
+    {
+        for (j = 0 ; j < 5 ; j++)
+        {
+            scanf ("%i", &Matriz[i][j]);
+        }
+    }
+
+    printf ("Digite um numero qualquer: ");
+    scanf ("%i", &x);
+
+    for (i = 0 ; i < 5 ; i++)
+    {
+        for (j = 0 ; j < 5 ; j++)
+        {
+            if (Matriz[i][j] == x)
+            {
+                encontrado = 1;
+                linha = i;
+                coluna = j;
+            }
+        }
+    }
+
+    if(encontrado)
+    {
+        printf ("O valor %i esta na matriz, localizado em %i %i", x, linha, coluna);
+    }
+    else
+    {
+        printf ("O valor %i nao esta na matriz");
+    }
+
+    return 0;
+}
+
+
 
