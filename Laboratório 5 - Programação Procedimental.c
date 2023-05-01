@@ -420,5 +420,47 @@ main()
     return 0;
 }
 
+//Exercício 13
+
+#include <stdio.h>
+#include <math.h>
+
+int
+main()
+{
+    int Matriz[10][10];
+    int i, j;
+
+    for (i = 0 ; i < 5 ; i++)
+    {
+        for (j = 0 ; j < 5 ; j++)
+        {
+            if (i < j)
+            {
+                Matriz[i][j] = (2*i)+(7*j);
+            }
+            if (i == j)
+            {
+                Matriz[i][j] = (3*pow(i,2)) - 1;
+            }
+            else 
+            {
+                Matriz[i][j] = (4*pow(i,3) - 5*pow(j,2));
+            }
+        }
+    }
+
+    for (i = 0 ; i < 5 ; i++)
+    {
+        for (j = 0 ; j < 5 ; j++)
+        {
+            printf ("%i ", Matriz[i][j]);
+        }
+        printf ("\n");
+    }
+    return 0;
+}
+
+//Exercício 14
 
 
