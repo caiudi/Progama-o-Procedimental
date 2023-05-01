@@ -328,3 +328,48 @@ main()
 }
 
 //Exercício 11
+
+#include <stdio.h>
+
+int
+main()
+{
+    int Matriz[4][4];
+    int i, j;
+    int maior, linha, coluna;
+
+    printf ("Digite os valores da Matriz: ");
+
+    for (i = 0 ; i < 4 ; i++)
+    {
+        for (j = 0 ; j < 4 ; j++)
+        {
+            scanf ("%i", &Matriz[i][j]);
+        }
+    }
+
+    maior = Matriz[0][0];
+    linha = 0;
+    coluna = 0;
+
+    for (i = 0 ; i < 4 ; i++)
+    {
+        for (j = 0 ; j < 4 ; j++)
+        {
+            if(Matriz[i][j] > maior)
+            {
+                maior = Matriz[i][j];
+                linha = i;
+                coluna = j;
+            }
+        }
+    }
+
+    printf ("O maior valor da Matriz eh %i, e esta na posicao %i %i", maior, linha, coluna);
+
+    return 0;
+}
+
+//Exercício 12
+
+
