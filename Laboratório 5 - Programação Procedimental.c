@@ -463,4 +463,46 @@ main()
 
 //Exercício 14
 
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+
+int
+main()
+{
+    int Matriz[4][4];
+    int i, j;
+
+    srand(time(NULL));
+
+    for (i = 0; i < 4; i++) 
+    {
+        for (j = 0; j < 4; j++) 
+        {
+            Matriz[i][j] = rand() % 20 + 1;
+        }
+    }
+
+    for (i = 0 ; i < 4 ; i++)
+    {
+        for (j = 0 ; j < 4 ; j++)
+        {
+            if (i != j)
+            Matriz[i][j] = 0;
+        }
+    }
+
+    for (i = 0 ; i < 4 ; i++)
+    {
+        for (j = 0 ; j < 4 ; j++)
+        {
+            printf ("%i ", Matriz[i][j]);
+        }
+        printf ("\n");
+    }
+    return 0;
+}
+
+//Exercício 15
 
