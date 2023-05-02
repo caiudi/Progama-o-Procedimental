@@ -686,3 +686,23 @@ main()
 
 //Exercício 17
 
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+
+int
+main()
+{
+    char String[100];
+
+    printf ("Digite uma string:\n");
+    scanf ("%s", String);
+
+    printf ("A String digitada foi:%s", String);
+
+    return 0;
+}
+
+//Exercício 18
+
