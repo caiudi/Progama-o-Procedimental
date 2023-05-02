@@ -706,3 +706,37 @@ main()
 
 //Exercício 18
 
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+
+int
+main()
+{
+    char String[100];
+    int contador = 0;
+    int i;
+    
+    printf ("Digite uma String:\n");
+    scanf ("%s", String);
+
+    for ( i = 0 ; i < strlen(String) ; i++)
+    {
+        if(String == '1');
+        {
+            contador++;
+        }
+    }
+
+    printf ("A quantidade de 1's na String eh: %i", contador);
+    
+    return 0;
+}
+
+//Exercício 19
+
+
+
+
