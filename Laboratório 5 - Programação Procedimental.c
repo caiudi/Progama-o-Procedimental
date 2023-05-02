@@ -506,3 +506,139 @@ main()
 
 //Exercício 15
 
+//Exercício 16
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+
+int
+main()
+{
+    float A[2][2], B[2][2];
+    int i, j;
+    int opcao, constante;
+
+    printf ("Digite os elementos da primeira Matriz: ");
+
+    printf ("\n");
+    
+    for (i = 0 ; i < 2 ; i++)
+    {
+        for (j = 0 ; j < 2 ; j++)
+        {
+            scanf ("%f", &A[i][j]);
+        }
+    }
+
+    printf ("Digite os elemtentos da segunda Matriz: ");
+
+    printf ("\n");
+
+    for (i = 0 ; i < 2 ; i++)
+    {
+        for (j = 0 ; j < 2 ; j++)
+        {
+            scanf ("%f", &B[i][j]);
+        }
+    }
+
+    printf ("Escolha uma das opcoes a seguir:\n\n1 - Somar as duas matrizes\n2 - Subtrair a primeira matriz da segunda\n3 - Adicionar uma constante às duas matrizes\n4 - Imprimir as matrizes\n");
+
+    scanf ("%i", &opcao);
+
+    switch (opcao)
+    {
+        case 1:
+        {
+            printf ("Adicao selecionada:\n");
+            
+            for (i = 0 ; i < 2 ; i++)
+            {
+                for (j = 0 ; j < 2 ; j++)
+                {
+                    printf ("%.1f ", A[i][j] + B[i][j]);
+                } 
+                printf ("\n");
+            }
+        
+        break;
+        }
+
+        case 2:
+        {
+            printf ("Subtracao selecionada:\n");
+            
+            for (i = 0 ; i < 2 ; i++)
+            {
+                for (j = 0 ; j < 2 ; j++)
+                {
+                    printf ("%.1f ", A[i][j] - B[i][j]);
+                } 
+                printf ("\n");
+            }
+        
+        break;
+        }
+
+        case 3:
+        {
+            printf ("Adicao por constante selecionada:\n\nDigite a constante:\n");
+            scanf ("%i", &constante);
+            
+            printf ("Primeira matriz:\n");
+            
+            for (i = 0; i < 2 ; i++)
+            {
+                for (j = 0 ; j < 2 ; j++)
+                {
+                    printf ("%.1f ", A[i][j] + constante);
+                } 
+                printf ("\n");
+            }
+
+            printf ("Segunda matriz:\n");
+
+            for (i = 0; i < 2 ; i++)
+            {
+                for (j = 0 ; j < 2 ; j++)
+                {
+                    printf ("%.1f ", B[i][j] + constante);
+                } 
+                printf ("\n");
+            }
+        }
+        break;
+
+        case 4:
+        {
+            printf ("Impressao das raizes selecionada:\n");
+
+        for (i = 0; i < 2 ; i++)
+            {
+                for (j = 0 ; j < 2 ; j++)
+                {
+                    printf ("%.2f ", A[i][j]);
+                } 
+                printf ("\n");
+            }
+        
+        printf ("\n");
+
+        for (i = 0; i < 2 ; i++)
+            {
+                for (j = 0 ; j < 2 ; j++)
+                {
+                    printf ("%.2f ", B[i][j]);
+                } 
+                printf ("\n");
+            }
+        }
+        break;
+    }
+    return 0;
+}
+
+//Exercício 17
+
