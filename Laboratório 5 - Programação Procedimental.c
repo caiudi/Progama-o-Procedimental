@@ -506,6 +506,50 @@ main()
 
 //Exercício 15
 
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+
+int
+main()
+{
+    int Cartela[5][5] = {0};
+    int Numero_Sorteado[100] = {0};
+    int i, j;
+    int Numero_Aleatorio;
+
+    srand(time(NULL));
+
+    for(i = 0 ; i < 5 ; i++) 
+    {
+        for(j = 0 ; j < 5 ; j++) 
+        {
+            do 
+            {
+                Numero_Aleatorio = rand() % 100;               
+            }
+            while (Numero_Aleatorio == 0 || Numero_Sorteado[Numero_Aleatorio]);
+            
+            Numero_Sorteado[Numero_Aleatorio] = 1;
+            Cartela[i][j] = Numero_Aleatorio;
+        }
+    }
+
+    printf ("Cartela Gerada:\n");
+
+    for(i = 0 ; i < 5 ; i++) 
+    {
+        for(j = 0 ; j < 5 ; j++) 
+        {
+            printf ("%i ", Cartela[i][j]);
+        }
+        printf ("\n");\n
+    }
+
+    return 0;
+}
+
 //Exercício 16
 
 #include <stdio.h>
