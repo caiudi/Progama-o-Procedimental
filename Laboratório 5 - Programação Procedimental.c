@@ -737,6 +737,36 @@ main()
 
 //Exercício 19
 
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+
+int
+main()
+{
+    char String[100];
+    int contador = 0;
+    int i;
+    
+    printf ("Digite uma String:\n");
+    scanf ("%s", String);
+
+    for ( i = strlen(String) ; i >= 0 ; i--)
+    {
+        printf ("%c", String[i]);
+    }
+    
+    printf ("\n");
+
+    return 0;
+} 
+
+//Exercício 20
+
+
+
 
 
 
