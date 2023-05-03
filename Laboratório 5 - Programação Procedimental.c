@@ -783,7 +783,7 @@ main()
 
     printf ("\n");
 
-    for ( i = 0 ; i < strlen(String) ; i++);
+    for ( i = 0 ; i < strlen(String) ; i++)
     {
         if (String[i] == 'a' || String[i] == 'e' || String[i] == 'i' || String[i] == 'o' || String[i] == 'u' || String[i] == 'A' || String[i] == 'E' || String[i] == 'I' || String[i] == 'O' || String[i] == 'U')
         {
