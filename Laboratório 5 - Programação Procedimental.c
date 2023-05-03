@@ -765,7 +765,53 @@ main()
 
 //Exercício 20
 
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
 
+int
+main()
+{
+    char String[100], c;
+    int vogais = 0;
+    int i;
+
+    printf ("Digite uma palavra: ");
+    scanf ("%s", String);
+
+    printf ("\n");
+
+    for ( i = 0 ; i < strlen(String) ; i++);
+    {
+        if (String[i] == 'a' || String[i] == 'e' || String[i] == 'i' || String[i] == 'o' || String[i] == 'u' || String[i] == 'A' || String[i] == 'E' || String[i] == 'I' || String[i] == 'O' || String[i] == 'U')
+        {
+            vogais++;
+        }
+    }
+
+    printf ("A palavra tem %i vogais", vogais);
+
+    printf ("\n");
+
+    printf ("Digite um caracter: ");
+    scanf (" %c", &c);
+
+    for ( i = 0 ; i < strlen(String) ; i++)
+    {
+        if (String[i] == 'a' || String[i] == 'e' || String[i] == 'i' || String[i] == 'o' || String[i] == 'u' || String[i] == 'A' || String[i] == 'E' || String[i] == 'I' || String[i] == 'O' || String[i] == 'U')
+        {
+            String[i] = c;
+        }
+    }
+
+    printf ("%c", String);
+
+    return 0;
+}
+
+//Exercício 21
 
 
 
