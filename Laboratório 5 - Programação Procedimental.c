@@ -813,6 +813,34 @@ main()
 
 //Exercício 21
 
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+
+int
+main()
+{
+    char String[100], conversao[100];
+    int i;
+
+    printf ("Digite uma cadeia de caracteres MAIUSCULOS: ");
+    scanf ("%s", String);
+
+    printf ("\n");
+
+    for ( i = 0 ; i < strlen(String) ; i++)
+    {
+        String[i] += 32;
+    }
+
+    printf ("%s", String);
+
+    return 0;
+}
+
+//Exercício 22
 
 
 
