@@ -806,7 +806,7 @@ main()
         }
     }
 
-    printf ("%c", String);
+    printf ("%s", String);
 
     return 0;
 }
