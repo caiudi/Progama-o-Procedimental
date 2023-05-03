@@ -871,6 +871,39 @@ main()
 
 //Exercício 23
 
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+
+int
+main()
+{
+    char String[100], String2[100];
+    int i, j = 0;
+
+    printf ("Digite uma frase, com espacos incluidos. ");
+    fgets(String, 100, stdin);
+
+    printf ("\n");
+
+    for ( i = 0 ; i < strlen(String) ; i++)
+    {
+        if (String[i] != ' ')
+        {
+            String2[j++] = String[i];
+        }
+    }
+    
+    String2[j] = '\0';
+
+    printf ("%s", String2);
+
+    return 0;
+}
+
+//Exercício 24
 
 
 
