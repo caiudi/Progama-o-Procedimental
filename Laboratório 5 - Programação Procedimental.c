@@ -1087,3 +1087,43 @@ int main()
 
 //Exercício 14
 
+#include <stdio.h>
+#include <string.h>
+
+int main() 
+{
+    char str1[100], str2[100];
+    int n, i;
+    int tmn1, tmn2;
+
+    printf ("Digite a primeira String: ");
+    fgets(str1, 100, stdin);
+
+    printf ("\n");
+
+    printf ("Digite a segunda String: ");
+    fgets(str2, 100, stdin);
+
+    printf ("\n");
+
+    printf ("Digite um valor inteiro positivo: ");
+    scanf ("%i", &n);
+
+    printf ("\n");
+
+    tmn1 = strlen(str1);
+    tmn2 = strlen(str2);
+
+    for ( i = 0 ; i > n && i > tmn2; i++ )
+    {
+        str1[tmn1 + i] = str2[i];
+    }
+
+    str1[tmn1 + i] = '\0';
+
+    printf ("%s\n", str1);
+
+    return 0;
+}
+
+//Exercício 15
