@@ -938,6 +938,43 @@ main()
     return 0;
 }
 
-//Exerício 9
+//Exercício 9
+
+//Exercício 10
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int
+main()
+{
+    char String[100];
+    int Valor_Inicial, Valor_Final, Valor_Desconto;
+
+    printf ("Digite o nome da mercadoria: ");
+    fgets (String, 100, stdin);
+    
+    printf ("\n");
+    
+    printf ("Digite o valor da mercadoria: ");
+    scanf ("%i", &Valor_Inicial);
+
+    printf ("\n");
+
+    Valor_Final = Valor_Inicial*0.90;
+
+    Valor_Desconto = Valor_Inicial*0.10;
+
+    printf ("Mercadoria: %s\nValor Total: %i\nValor do desconto: %i\nValor a ser pago a vista: %i", String, Valor_Inicial, Valor_Desconto, Valor_Final);
+
+    return 0;
+}
+
+//Exercício 11
+
 
 
