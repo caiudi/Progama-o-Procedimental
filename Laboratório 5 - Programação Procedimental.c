@@ -260,7 +260,7 @@ int main() {
     return 0;
 }
 
-//Exercício 9
+//Exercício 1 (Matrizes)
 
 #include <stdio.h>
 
@@ -292,7 +292,7 @@ main()
     return 0;
 }
 
-//Exercício 10
+//Exercício 2
 
 #include <stdio.h>
 
@@ -327,7 +327,7 @@ main()
     }
 }
 
-//Exercício 11
+//Exercício 3
 
 #include <stdio.h>
 
@@ -370,7 +370,7 @@ main()
     return 0;
 }
 
-//Exercício 12
+//Exercício 4
 
 #include <stdio.h>
 
@@ -420,7 +420,7 @@ main()
     return 0;
 }
 
-//Exercício 13
+//Exercício 5
 
 #include <stdio.h>
 #include <math.h>
@@ -461,7 +461,7 @@ main()
     return 0;
 }
 
-//Exercício 14
+//Exercício 6
 
 #include <stdio.h>
 #include <math.h>
@@ -504,7 +504,7 @@ main()
     return 0;
 }
 
-//Exercício 15
+//Exercício 7
 
 #include <stdio.h>
 #include <math.h>
@@ -550,7 +550,7 @@ main()
     return 0;
 }
 
-//Exercício 16
+//Exercício 8
 
 #include <stdio.h>
 #include <math.h>
@@ -657,7 +657,7 @@ main()
 
         case 4:
         {
-            printf ("Impressao das raizes selecionada:\n");
+            printf ("Impressao das matrizes selecionada:\n");
 
         for (i = 0; i < 2 ; i++)
             {
@@ -684,7 +684,7 @@ main()
     return 0;
 }
 
-//Exercício 17
+//Exercício 1 (Strings)
 
 #include <stdio.h>
 #include <math.h>
@@ -704,7 +704,7 @@ main()
     return 0;
 }
 
-//Exercício 18
+//Exercício 2
 
 #include <stdio.h>
 #include <math.h>
@@ -735,7 +735,7 @@ main()
     return 0;
 }
 
-//Exercício 19
+//Exercício 3
 
 #include <stdio.h>
 #include <math.h>
@@ -763,7 +763,7 @@ main()
     return 0;
 } 
 
-//Exercício 20
+//Exercício 4
 
 #include <stdio.h>
 #include <math.h>
@@ -811,7 +811,7 @@ main()
     return 0;
 }
 
-//Exercício 21
+//Exercício 5
 
 #include <stdio.h>
 #include <math.h>
@@ -840,7 +840,7 @@ main()
     return 0;
 }
 
-//Exercício 22
+//Exercício 6
 
 #include <stdio.h>
 #include <math.h>
@@ -869,7 +869,7 @@ main()
     return 0;
 }
 
-//Exercício 23
+//Exercício 7
 
 #include <stdio.h>
 #include <math.h>
@@ -903,7 +903,41 @@ main()
     return 0;
 }
 
-//Exercício 24
+//Exercício 8
 
+#include <stdio.h>
+#include <string.h>
+
+int
+main()
+{
+    char String[100];
+    char L1, L2;
+    int i;
+
+    printf ("Digite uma String: ");
+    fgets(String, 100, stdin);
+
+    printf ("\n");
+
+    printf ("Digite duas letras: ");
+    scanf ("%c %c", &L1, &L2);
+
+    printf ("\n");
+
+    for ( i = 0 ; i < strlen(String) ; i++)
+    {
+        if(String[i] == L1)
+        {
+            String[i] = L2;
+        }
+    }
+
+    printf ("%s", String);
+
+    return 0;
+}
+
+//Exerício 9
 
 
