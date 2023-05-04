@@ -976,5 +976,35 @@ main()
 
 //Exercício 11
 
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
 
+
+int
+main()
+{
+    char S[100];
+    int i, j;
+    int k;
+
+    printf ("Digite uma String: ");
+    fgets ( S, 100, stdin);
+    
+    printf ("\n");
+
+    printf ("Digite 2 inteiros nao-negativos: ");
+    scanf ("%i %i", &i, &j);
+
+    printf ("\n");
+
+    for ( k = i ; k <= j; k++)
+    {
+        printf ("%c", S[k]);
+    }
+
+    return 0;
+}
 
