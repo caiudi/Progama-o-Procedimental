@@ -940,6 +940,43 @@ main()
 
 //Exercício 9
 
+include <stdio.h>
+#include <string.h>
+
+int main() {
+    char carros[5][100];
+    float consumo[5];
+    float menor_consumo = 1000000;
+    int indice_menor_consumo = 0;
+
+    for (int i = 0; i < 5; i++) 
+    {
+        printf("Digite o modelo do carro %d: ", i+1);
+        scanf("%s", carros[i]);
+        printf("Digite o consumo do carro %s (km/l): ", carros[i]);
+        scanf("%f", &consumo[i]);
+    }
+
+    for (int i = 0; i < 5; i++) {
+        if (consumo[i] < menor_consumo) {
+            menor_consumo = consumo[i];
+            indice_menor_consumo = i;
+        }
+    }
+
+    printf("O modelo mais econômico é o %s\n", carros[indice_menor_consumo]);
+
+    printf("Consumo para percorrer 1000km:\n");
+    for (int i = 0; i < 5; i++) 
+    {
+        float litros = 1000 / consumo[i];
+        printf("%s: %.2f litros\n", carros[i], litros);
+    }
+
+    return 0;
+}
+
+
 //Exercício 10
 
 #include <stdio.h>
