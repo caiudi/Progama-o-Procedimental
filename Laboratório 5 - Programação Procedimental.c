@@ -1008,3 +1008,39 @@ main()
     return 0;
 }
 
+//Exercício 12
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() 
+{
+    char Cesar[100];
+    int i;
+
+    printf("Digite uma mensagem: ");
+    fgets(Cesar, 100, stdin);
+
+    printf ("\n");
+    
+    for (i = 0; i < strlen(Cesar) ; i++) 
+    {
+        if (Cesar[i] >= 'a' && Cesar[i] <= 'z') 
+        {
+            Cesar[i] = (Cesar[i] - 'a' + 3) % 26 + 'a';
+        } 
+        if (Cesar[i] >= 'A' && Cesar[i] <= 'Z')
+        {
+            Cesar[i] = (Cesar[i] - 'A' + 3) % 26 + 'A';
+        }
+    }
+
+    printf("%s", Cesar);
+
+    return 0;
+}
+
+//Exercício 13
