@@ -1127,3 +1127,154 @@ int main()
 }
 
 //Exercício 15
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char s1[20], s2[20], c1, c2;
+    int opcao, posicao, tamanho, i, j, contador, tamanho_s1, tamanho_s2;
+    do
+    {
+        printf("\nMenu:\n");
+        printf("1 - Ler uma string S1 (tamanho maximo 20 caracteres)\n");
+        printf("2 - Imprimir o tamanho da string S1\n");
+        printf("3 - Comparar a string S1 com uma nova string S2 fornecida pelo usuario e imprimir o resultado da comparacao\n");
+        printf("4 - Concatenar a string S1 com uma nova string S2 e imprimir na tela o resultado da concatenacao\n");
+        printf("5 - Imprimir a string S1 de forma reversa\n");
+        printf("6 - Contar quantas vezes um dado caractere aparece na string S1. Esse caractere deve ser informado pelo usuario\n");
+        printf("7 - Substituir a primeira ocorrencia do caractere C1 da string S1 pelo caractere C2. Os caracteres C1 e C2 serao lidos pelo usuario\n");
+        printf("8 - Verificar se uma string S2 e substring de S1. A string S2 deve ser informada pelo usuario\n");
+        printf("9 - Retornar uma substring da string S1. Para isso o usuario deve informar a partir de qual posicao deve ser criada a substring e qual e o tamanho da substring\n");
+        printf("0 - Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
+        switch (opcao)
+        {
+            case 0:
+            {
+                printf("Programa encerrado.\n");
+                break;
+            }
+            case 1:
+            {
+                printf("Digite uma string S1 (tamanho maximo 20 caracteres): ");
+                scanf("%s", s1);
+                break;
+            }
+            case 2:
+            {
+                tamanho_s1 = strlen(s1);
+                printf("O tamanho da string S1 e %d.\n", tamanho_s1);
+                break;
+            }
+            case 3:
+            {
+                printf("Digite uma nova string S2: ");
+                scanf("%s", s2);
+                if (strcmp(s1, s2) == 0)
+                {
+                    printf("As strings sao iguais.\n");
+                }
+                else
+                {
+                    printf("As strings sao diferentes.\n");
+                }
+                break;
+            }
+            case 4:
+            {
+                printf("Digite uma nova string S2: ");
+                scanf("%s", s2);
+                strcat(s1, s2);
+                printf("A concatenacao das strings S1 e S2 resulta na string %s.\n", s1);
+                break;
+            }
+            case 5:
+            {
+                tamanho_s1 = strlen(s1);
+                for (i = tamanho_s1 - 1; i >= 0; i--)
+                {
+                    printf("%c", s1[i]);
+                }
+                printf("\n");
+                break;
+            }
+            case 6:
+            {
+                printf("Digite um caractere: ");
+                scanf(" %c", &c1);
+                tamanho_s1 = strlen(s1);
+                contador = 0;
+                for (i = 0; i < tamanho_s1; i++)
+                {
+                    if (s1[i] == c1)
+                    {
+                        contador++;
+                    }
+                }
+                printf("O caractere %c aparece %d vezes na string S1.\n", c1, contador);
+            break;
+            }
+            case 7:
+            {
+                printf("Digite o caractere a ser substituido: ");
+                scanf(" %c", &c1);
+                printf("Digite o caractere substituto: ");
+                scanf(" %c", &c2);
+                tamanho_s1 = strlen(s1);
+                for (i = 0; i < tamanho_s1; i++)
+                {
+                    if (s1[i] == c1)
+                    {
+                        s1[i] = c2;
+                        break;
+                    }
+                }
+                printf("A string S1 após a substituicao é %s.\n", s1);
+                break;
+            }
+            case 8:
+            {
+                printf("Digite uma string S2: ");
+                scanf("%s", s2);
+                if (strstr(s1, s2) != NULL)
+                {
+                    printf("A string S2 é uma substring de S1.\n");
+                }
+                else
+                {
+                    printf("A string S2 não é uma substring de S1.\n");
+                }
+                break;
+            }
+            case 9:
+            {
+                printf("Digite a posicao inicial para criacao da substring: ");
+                scanf("%d", &posicao);
+                printf("Digite o tamanho da substring: ");
+                scanf("%d", &tamanho);
+                tamanho_s1 = strlen(s1);
+                if (posicao >= 0 && posicao <= tamanho_s1 && tamanho >= 0 && tamanho <= tamanho_s1 - posicao)
+                {
+                    for (i = posicao, j = 0; j < tamanho; i++, j++)
+                    {
+                        printf("%c", s1[i]);
+                    }
+                    printf("\n");
+                }
+                else
+                {
+                    printf("Dados invalidos para criacao da substring.\n");
+                }
+                break;
+            }
+            default:
+                printf("Opcao invalida.\n");
+        }
+    } while (opcao != 0);
+    return 0;
+}
+
+//Exercício 16
