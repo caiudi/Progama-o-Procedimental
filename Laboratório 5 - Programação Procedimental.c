@@ -1044,3 +1044,46 @@ int main()
 }
 
 //Exercício 13
+
+#include <stdio.h>
+#include <string.h>
+
+int main() 
+{
+    char String[100], Copia_String[100];
+    int i, tamanho, igual = 0;
+
+    printf ("Digite uma palavra: ");
+    scanf ("%s", String);
+
+    tamanho = strlen(String);
+
+    for ( i = 0 ; i < tamanho ; i++)
+    {
+        Copia_String[i] = String[tamanho - 1];
+        tamanho--;
+    }
+    Copia_String[i] = '\0';
+
+    for ( i = 0 ; i < tamanho ; i++)
+    {
+        if (String[i] == Copia_String[i])
+        {
+            igual++;
+        }
+    }
+
+    if ( tamanho == igual)
+    {
+        printf ("Eh palindromo.\n");
+    }
+    else
+    {
+        printf ("Nao e palindromo.\n");
+    }
+
+    return 0;
+}
+
+//Exercício 14
+
