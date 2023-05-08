@@ -210,23 +210,31 @@ main()
     printf ("Aluno com Maior P1:\n\n");
     printf ("Nome: %s\n", Alunos[Numero_Aluno_P1].Nome);
     printf ("Matricula: %s\n)", Alunos[Numero_Aluno_P1].Matricula);
-    printf ("P1: %i\n", Alunos[Numero_Aluno_P1].Nota_P1);
-    printf ("P2: %i\n", Alunos[Numero_Aluno_P1].Nota_P2);
-    printf ("P3: %i\n", Alunos[Numero_Aluno_P1].Nota_P3);
 
     printf ("Aluno com Maior Media:\n\n");
     printf ("Nome: %s\n", Alunos[Numero_Aluno_MaiorMedia].Nome);
     printf ("Matricula: %s\n)", Alunos[Numero_Aluno_MaiorMedia].Matricula);
-    printf ("P1: %i\n", Alunos[Numero_Aluno_MaiorMedia].Nota_P1);
-    printf ("P2: %i\n", Alunos[Numero_Aluno_MaiorMedia].Nota_P2);
-    printf ("P3: %i\n", Alunos[Numero_Aluno_MaiorMedia].Nota_P3);
-
+   
     printf ("Aluno com Menor Media:\n\n");
     printf ("Nome: %s\n", Alunos[Numero_Aluno_MenorMedia].Nome);
     printf ("Matricula: %s\n)", Alunos[Numero_Aluno_MenorMedia].Matricula);
-    printf ("P1: %i\n", Alunos[Numero_Aluno_MenorMedia].Nota_P1);
-    printf ("P2: %i\n", Alunos[Numero_Aluno_MenorMedia].Nota_P2);
-    printf ("P3: %i\n", Alunos[Numero_Aluno_MenorMedia].Nota_P3);
+
+    for ( i = 0 ; i < 5 ; i++)
+    {
+        if (Media >= 6)
+        {
+            printf ("%s Foi aprovado!", Alunos[i].Nome);
+        }
+        else
+        {
+            printf ("%s Foi Reprovado!", Alunos[i].Nome);
+        }
+    }
+    
+    return 0;
 }
+
+//Exercício 5
+
 
 
