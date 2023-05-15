@@ -419,7 +419,230 @@ int main()
 
 //Exercício 9
 
+#include <stdio.h>
+#include <math.h>
+
+struct complexo
+{
+  float real;
+  float imag;
+};
+
+typedef struct complexo complexo;
+
+int main() {
+  complexo z, w, s, sub, p;
+  float modz, modw;
+
+  printf("Digite a parte real e imaginaria de z: ");
+  scanf("%f %f", &z.real, &z.imag);
+  printf("Digite a parte real e imaginaria de w: ");
+  scanf("%f %f", &w.real, &w.imag);
+
+  s.real = z.real + w.real;
+  s.imag = z.imag + w.imag;
+
+  sub.real = z.real - w.real;
+  sub.imag = z.imag - w.imag;
+
+  p.real = z.real*w.real - z.imag*w.imag;
+  p.imag = z.real*w.imag + z.imag*w.real;
+
+  modz = sqrt(z.real*z.real + z.imag*z.imag);
+  modw = sqrt(w.real*w.real + w.imag*w.imag);
+
+  printf("Soma: %.2f + %.2fi\n", s.real, s.imag);
+  printf("Subtracao: %.2f + %.2fi\n", sub.real, sub.imag);
+  printf("Produto: %.2f + %.2fi\n", p.real, p.imag);
+  printf("Modulo de z: %.2f\n", modz);
+  printf("Modulo de w: %.2f\n", modw);
+
+  return 0;
+}
+
 //Exercício 10
+
+#include <stdio.h>
+#include <string.h>
+
+struct Pessoa 
+{
+  char nome[50];
+  char endereco[100];
+  char telefone[20];
+};
+
+typedef struct Pessoa Pessoa;
+
+int main() 
+{
+  Pessoa pessoas[5];
+  int i, j;
+  Pessoa temp;
+
+  for (i = 0; i < 5; i++) 
+  {
+    printf("Digite o nome da pessoa %d: ", i+1);
+    fgets(pessoas[i].nome, 50, stdin);
+    printf("Digite o endereco da pessoa %d: ", i+1);
+    fgets(pessoas[i].endereco, 100, stdin);
+    printf("Digite o telefone da pessoa %d: ", i+1);
+    fgets(pessoas[i].telefone, 20, stdin);
+  }
+
+  for (i = 0; i < 5-1; i++) 
+  {
+    for (j = i+1; j < 5; j++) {
+      if (strcmp(pessoas[i].nome, pessoas[j].nome) > 0) 
+      {
+        temp = pessoas[i];
+        pessoas[i] = pessoas[j];
+        pessoas[j] = temp;
+      }
+    }
+  }
+
+  printf("Dados das pessoas em ordem alfabetica:\n");
+  for (i = 0; i < 5; i++) 
+  {
+    printf("Nome: %s", pessoas[i].nome);
+    printf("Endereco: %s", pessoas[i].endereco);
+    printf("Telefone: %s\n", pessoas[i].telefone);
+  }
+
+  return 0;
+}
+
+//Exercício 11
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Aluno 
+{
+    char nome[50];
+    int matricula;
+    float mediaFinal;
+};
+
+typedef struct Aluno Aluno;
+
+int main() 
+{
+    Aluno alunos[10];
+    Aluno aprovados[10];
+    Aluno reprovados[10];
+    int i, j = 0, k = 0;
+
+    for (i = 0; i < 10; i++) 
+    {
+        printf("Digite o nome do aluno %d: ", i+1);
+        fgets(alunos[i].nome, 50, stdin);
+        printf("Digite a matricula do aluno %d: ", i+1);
+        scanf("%d", &alunos[i].matricula);
+        printf("Digite a media final do aluno %d: ", i+1);
+        scanf("%f", &alunos[i].mediaFinal);
+        fflush(stdin);
+    }
+
+    for (i = 0; i < 10; i++) 
+    {
+        if (alunos[i].mediaFinal >= 5.0) 
+        {
+            aprovados[j] = alunos[i];
+            j++;
+        } 
+        else 
+        {
+            reprovados[k] = alunos[i];
+            k++;
+        }
+    }
+
+    printf("\nAlunos aprovados:\n");
+    for (i = 0; i < j; i++) 
+    {
+        printf("Nome: %s", aprovados[i].nome);
+        printf("Matricula: %d\n", aprovados[i].matricula);
+        printf("Media Final: %.2f\n", aprovados[i].mediaFinal);
+        printf("\n");
+    }
+
+    printf("\nAlunos reprovados:\n");
+    for (i = 0; i < k; i++) 
+    {
+        printf("Nome: %s", reprovados[i].nome);
+        printf("Matricula: %d\n", reprovados[i].matricula);
+        printf("Media Final: %.2f\n", reprovados[i].mediaFinal);
+        printf("\n");
+    }
+
+    return 0;
+}
+
+//Exercício 12
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+struct carta 
+{
+    int naipe; //0 = Ouros, 1 = Espadas, 2 = Copas, 3 = Paus.
+    int valor; //Numeração de 1 a 10;
+};
+
+typedef struct carta carta;
+
+int main()
+{
+    carta baralho[40];
+    carta maoJogador1[3], maoJogador2[3];
+    int i, j, k;
+    srand(time(NULL));  
+    
+    k = 0;
+    for (i = 0; i < 4; i++) 
+    {
+        for (j = 1; j <= 10; j++) 
+        {
+            baralho[k].naipe = i;
+            baralho[k].valor = j;
+            k++;
+        }
+    }
+    
+    carta temp;
+    for (i = 0; i < 40; i++) 
+    {
+        j = rand() % 40;
+        temp = baralho[i];
+        baralho[i] = baralho[j];
+        baralho[j] = temp;
+    }
+    
+    for (i = 0; i < 3; i++) 
+    {
+        maoJogador1[i] = baralho[i];
+        maoJogador2[i] = baralho[i+3];
+    }
+    
+    printf("Cartas na mao do Jogador 1: ");
+    for (i = 0; i < 3; i++) 
+    {
+        printf("(%d,%d) ", maoJogador1[i].naipe, maoJogador1[i].valor);
+    }
+    printf("\n");
+    
+    printf("Cartas na mao do Jogador 2: ");
+    for (i = 0; i < 3; i++)
+    {
+        printf("(%d,%d) ", maoJogador2[i].naipe, maoJogador2[i].valor);
+    }
+    printf("\n");
+    
+    return 0;
+}
 
 
 
