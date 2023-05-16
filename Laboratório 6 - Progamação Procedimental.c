@@ -644,5 +644,246 @@ int main()
     return 0;
 }
 
+//Exercício 13
+
+//Exercício 14
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Carro 
+{
+    char marca[16];
+    int ano;
+    float preco;
+};
+
+typedef struct Carro Carro;
+
+int main() {
+
+    Carro carros[5];
+    int i;
+    float p;
+
+    for (i = 0; i < 5; i++) 
+    {
+        printf("Carro %d:\n", i + 1);
+
+        printf("Marca: ");
+        fgets(carros[i].marca, sizeof(carros[i].marca), stdin);
+        carros[i].marca[strcspn(carros[i].marca, "\n")] = '\0';
+
+        printf("Ano: ");
+        scanf("%d", &carros[i].ano);
+
+        printf("Preco: ");
+        scanf("%f", &carros[i].preco);
+
+        fflush(stdin);
+        printf("\n");
+    }
+
+    do 
+    {
+        printf("Digite o valor de p (0 para sair): ");
+        scanf("%f", &p);
+
+        fflush(stdin);
+
+        if (p != 0) 
+        {
+            printf("Carros com preço menor que: %.2f\n", p);
+
+            for (i = 0; i < 5; i++) 
+            {
+                if (carros[i].preco < p) 
+                {
+                    printf("Carro %d:\n", i + 1);
+                    printf("Marca: %s\n", carros[i].marca);
+                    printf("Ano: %d\n", carros[i].ano);
+                    printf("Preco: %.2f\n", carros[i].preco);
+                    printf("\n");
+                }
+            }
+        }
+
+    } 
+    while (p != 0);
+
+    return 0;
+}
+
+//Exercício 15
+
+#include <stdio.h>
+#include <string.h>
+
+struct Livro
+{
+    char titulo[30 + 1];
+    char autor[15 + 1];
+    int ano;
+};
+
+typedef struct Livro Livro;
+
+void buscarLivroPorTitulo(Livro livros[], int numLivros, const char tituloBusca[]) 
+{
+    int encontrados = 0;
+
+    printf("Resultados da busca:\n");
+
+    for (int i = 0; i < numLivros; i++) 
+    {
+        if (strcmp(livros[i].titulo, tituloBusca) == 0) 
+        {
+            printf("Livro %d:\n", i + 1);
+            printf("Título: %s\n", livros[i].titulo);
+            printf("Autor: %s\n", livros[i].autor);
+            printf("Ano: %d\n", livros[i].ano);
+            printf("\n");
+            encontrados++;
+        }
+    }
+
+    if (encontrados == 0) 
+    {
+        printf("Nenhum livro encontrado com o titulo: %s\n", tituloBusca);
+    }
+}
+
+int main() 
+{
+    Livro livros[5];
+
+    for (int i = 0; i < 5; i++) {
+        printf("Livro %d:\n", i + 1);
+        printf("Titulo: ");
+        fgets(livros[i].titulo, sizeof(livros[i].titulo), stdin);
+        livros[i].titulo[strcspn(livros[i].titulo, "\n")] = '\0';
+
+        printf("Autor: ");
+        fgets(livros[i].autor, sizeof(livros[i].autor), stdin);
+        livros[i].autor[strcspn(livros[i].autor, "\n")] = '\0';
+
+        printf("Ano: ");
+        scanf("%d", &livros[i].ano);
+        
+        fflush(stdin);
+
+        printf("\n");
+    }
+
+    char tituloBusca[30 + 1];
+    printf("Digite o titulo do livro que deseja buscar: ");
+    fgets(tituloBusca, sizeof(tituloBusca), stdin);
+    tituloBusca[strcspn(tituloBusca, "\n")] = '\0';
+
+    buscarLivroPorTitulo(livros, 5, tituloBusca);
+
+    return 0;
+}
+
+//Exercício 16
+
+#include <stdio.h>
+#include <string.h>
+
+struct Data
+{
+    int dia;
+    int mes;
+    int ano;
+};
+
+struct Compromisso
+{
+    char compromisso[60 + 1];
+    Data data;
+};
+
+typedef struct Data Data;
+typedef struct Compromisso Compromisso;
+
+void lerData(Data *data) 
+{
+    printf("Digite o dia: ");
+    scanf("%d", &(data->dia));
+
+    printf("Digite o mes: ");
+    scanf("%d", &(data->mes));
+
+    printf("Digite o ano: ");
+    scanf("%d", &(data->ano));
+}
+
+int exibirCompromissosMesAno(const Compromisso compromissos[], int numCompromissos, int mes, int ano) 
+{
+    printf("\nCompromissos do mês %d de %d:\n", mes, ano);
+
+    int encontrados = 0;
+
+    for (int i = 0; i < numCompromissos; i++) 
+    {
+        if (compromissos[i].data.mes == mes && compromissos[i].data.ano == ano) 
+        {
+            printf("Compromisso %d:\n", i + 1);
+            printf("Descricao: %s\n", compromissos[i].compromisso);
+            printf("Data: %d/%d/%d\n", compromissos[i].data.dia, compromissos[i].data.mes, compromissos[i].data.ano);
+            printf("\n");
+            encontrados++;
+        }
+    }
+
+    if (encontrados == 0) 
+    {
+        printf("Nenhum compromisso encontrado para o mes %d de %d.\n", mes, ano);
+    }
+
+    return encontrados;
+}
+
+int main() 
+{
+    Compromisso compromissos[5];
+
+    for (int i = 0; i < 5; i++) 
+    {
+        printf("Compromisso %d:\n", i + 1);
+        printf("Descricao: ");
+        fflush(stdin);
+        fgets(compromissos[i].compromisso, sizeof(compromissos[i].compromisso), stdin);
+        compromissos[i].compromisso[strcspn(compromissos[i].compromisso, "\n")] = '\0';
+
+        printf("Data:\n");
+        lerData(&(compromissos[i].data));
+
+        printf("\n");
+    }
+
+    int mes, ano;
+    int encontrados;
+
+    do 
+    {
+        printf("Digite o mes (0 para sair): ");
+        scanf("%d", &mes);
+
+        if (mes != 0) 
+        {
+            printf("Digite o ano: ");
+            scanf("%d", &ano);
+
+            encontrados = exibirCompromissosMesAno(compromissos, 5, mes, ano);
+        }
+    }
+    while (mes != 0);
+
+    return 0;
+}
+
+//Exercício 17
 
 
