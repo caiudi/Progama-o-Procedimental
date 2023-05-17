@@ -789,101 +789,307 @@ int main()
 //Exercício 16
 
 #include <stdio.h>
-#include <string.h>
 
 struct Data
+{
+    int Dia;
+    int Mes;
+    int Ano;
+};
+
+typedef struct Data Data;
+
+struct Compromisso
+{
+    char Compromisso[60];
+    Data Data;
+};
+
+typedef struct Compromisso Compromisso;
+
+int main()
+{
+    Compromisso Compromissos[5];
+    int i, Mes, Ano;
+
+    for(i = 0; i < 5; i++)
+    {
+        printf("Compromisso %i\n", i + 1);
+        printf("Descricao: ");
+        
+        fflush(stdin);
+
+        fgets(Compromissos[i].Compromisso, 60, stdin);
+
+        do
+        {
+            printf("Data:\n");
+            scanf("%i", &Compromissos[i].Data.Dia);
+
+            if((Compromissos[i].Data.Dia <= 0) || (Compromissos[i].Data.Dia > 31))
+            {
+                printf("Dia invalido. \n");
+            }
+        }while((Compromissos[i].Data.Dia <= 0) || (Compromissos[i].Data.Dia > 31));
+
+        do
+        {
+            printf("Insira o mes: ");
+            scanf("%i", &Compromissos[i].Data.Mes);
+
+            if((Compromissos[i].Data.Mes <= 0) || (Compromissos[i].Data.Mes > 12))
+            {
+                printf("Mes invalido. \n");
+            }
+        }
+        while((Compromissos[i].Data.Mes <= 0) || (Compromissos[i].Data.Mes > 12));
+
+        do
+        {
+            printf("Insira o ano: ");
+            scanf("%i", &Compromissos[i].Data.Ano);
+
+            if (Compromissos[i].Data.Ano < 2023)
+            {
+                printf("Ano invalido. \n");
+            }
+        }
+        while(Compromissos[i].Data.Ano < 2023);
+
+        printf("\n");
+
+    }
+
+    do
+    {
+        printf("Insira o mes: ");
+        scanf("%i", &Mes);
+
+        if(Mes != 0)
+        {
+            printf("Insira o ano ");
+            scanf("%i", &Ano);
+
+            printf("Compromissos do mes: \n");
+
+            for(i = 0; i < 5; i++)
+            {
+                if(Compromissos[i].Data.Mes == Mes)
+                {
+                    printf("%s \n", Compromissos[i].Compromisso);
+                }
+            }
+            printf("\n Compromissos do ano: \n");
+
+            for (i = 0; i < 5; i++)
+            {
+                if (Compromissos[i].Data.Ano == Ano)
+                {
+                    printf("%s \n", Compromissos[i].Compromisso);
+                }
+            }
+        }
+    }
+    while(Mes != 0);
+
+    return 0;
+}
+
+//Exercício 17
+
+#include <stdio.h>
+
+struct Eletrodomestico
+{
+    char nome[16];
+    float potencia;
+    float tempo_ativo;
+};
+
+typedef struct Eletrodomestico Eletrodomestico;
+
+int main() 
+{
+    Eletrodomestico eletrodomesticos[5];
+    float consumo_total = 0.0,  tempo_dias, consumo, consumo_relativo;
+    int i;
+
+    for ( i = 0; i < 5; i++) 
+    {
+        printf("Eletrodomestico %d:\n", i + 1);
+        printf("Nome: ");
+        scanf("%s", eletrodomesticos[i].nome);
+        printf("Potencia (em kW): ");
+        scanf("%f", &eletrodomesticos[i].potencia);
+        printf("Tempo ativo por dia (em horas): ");
+        scanf("%f", &eletrodomesticos[i].tempo_ativo);
+        printf("\n");
+    }
+
+    printf("Digite o tempo em dias: ");
+    scanf("%f", &tempo_dias);
+
+    printf("\nConsumo dos eletrodomesticos durante %.2f dias:\n", tempo_dias);
+    for (i = 0; i < 5; i++) 
+    {
+        consumo = eletrodomesticos[i].potencia * eletrodomesticos[i].tempo_ativo * tempo_dias;
+        printf("%s: %.2f kWh\n", eletrodomesticos[i].nome, consumo);
+        consumo_total += consumo;
+    }
+
+    printf("Consumo total na casa: %.2f kWh\n", consumo_total);
+
+    printf("Consumo relativo dos eletrodomesticos:\n");
+    for (i = 0; i < 5; i++) 
+    {
+        consumo_relativo = (eletrodomesticos[i].potencia * eletrodomesticos[i].tempo_ativo * tempo_dias) / consumo_total * 100;
+        printf("%s: %.2f%%\n", eletrodomesticos[i].nome, consumo_relativo);
+    }
+
+    return 0;
+}
+
+//Exercício 18
+
+#include <stdio.h>
+
+struct Voo
+{
+    int origem;
+    int destino;
+};
+
+struct Aeroporto
+{
+    int codigo;
+    int voos_saida;
+    int voos_chegada;
+};
+
+typedef struct Voo Voo;
+typedef struct Aeroporto Aeroporto;
+
+int main() 
+{
+    Voo voos[5];
+    Aeroporto aeroportos[5];
+    int i;
+    int origem, destino;
+
+    printf("Leitura dos voos:\n");
+    for (i = 0; i < 5; i++) 
+    {
+        printf("Voo %d:\n", i + 1);
+        printf("Código de origem (0 a %d): ", 5 - 1);
+        scanf("%d", &voos[i].origem);
+        printf("Código de destino (0 a %d): ", 5 - 1);
+        scanf("%d", &voos[i].destino);
+        printf("\n");
+    }
+
+    for (i = 0; i < 5; i++) 
+    {
+        aeroportos[i].codigo = i;
+        aeroportos[i].voos_saida = 0;
+        aeroportos[i].voos_chegada = 0;
+    }
+
+    for (i = 0; i < 5; i++) 
+    {
+        origem = voos[i].origem;
+        destino = voos[i].destino;
+
+        if (origem >= 0 && origem < 5 && destino >= 0 && destino < 5) 
+        {
+            aeroportos[origem].voos_saida++;
+            aeroportos[destino].voos_chegada++;
+        }
+    }
+
+    printf("Fluxo de voos nos aeroportos:\n");
+    for (i = 0; i < 5; i++) 
+    {
+        printf("Aeroporto %d:\n", i);
+        printf("Codigo: %d\n", aeroportos[i].codigo);
+        printf("Quantidade de voos de saida: %d\n", aeroportos[i].voos_saida);
+        printf("Quantidade de voos de chegada: %d\n", aeroportos[i].voos_chegada);
+        printf("\n");
+    }
+
+    return 0;
+}
+
+//Exercício 20
+
+#include <stdio.h>
+
+struct dma 
 {
     int dia;
     int mes;
     int ano;
 };
 
-struct Compromisso
+typedef struct dma dma;
+
+int diasNoMes(int mes, int ano) 
 {
-    char compromisso[60 + 1];
-    Data data;
-};
+    int dias;
 
-typedef struct Data Data;
-typedef struct Compromisso Compromisso;
+    if (mes == 2) {
+        if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0)
+            dias = 29;
+        else
+            dias = 28;
+    } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+        dias = 30;
+    } else {
+        dias = 31;
+    }
 
-void lerData(Data *data) 
-{
-    printf("Digite o dia: ");
-    scanf("%d", &(data->dia));
-
-    printf("Digite o mes: ");
-    scanf("%d", &(data->mes));
-
-    printf("Digite o ano: ");
-    scanf("%d", &(data->ano));
+    return dias;
 }
 
-int exibirCompromissosMesAno(const Compromisso compromissos[], int numCompromissos, int mes, int ano) 
+int dataParaDias(dma data) 
 {
-    printf("\nCompromissos do mês %d de %d:\n", mes, ano);
+    int totalDias = 0;
+    int ano, mes;
 
-    int encontrados = 0;
-
-    for (int i = 0; i < numCompromissos; i++) 
+    for (ano = 1; ano < data.ano; ano++) 
     {
-        if (compromissos[i].data.mes == mes && compromissos[i].data.ano == ano) 
-        {
-            printf("Compromisso %d:\n", i + 1);
-            printf("Descricao: %s\n", compromissos[i].compromisso);
-            printf("Data: %d/%d/%d\n", compromissos[i].data.dia, compromissos[i].data.mes, compromissos[i].data.ano);
-            printf("\n");
-            encontrados++;
-        }
+        if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0)
+            totalDias += 366;
+        else
+            totalDias += 365;
     }
 
-    if (encontrados == 0) 
+    for (mes = 1; mes < data.mes; mes++) 
     {
-        printf("Nenhum compromisso encontrado para o mes %d de %d.\n", mes, ano);
+        totalDias += diasNoMes(mes, data.ano);
     }
 
-    return encontrados;
+    totalDias += data.dia;
+
+    return totalDias;
 }
 
 int main() 
 {
-    Compromisso compromissos[5];
+    dma data1, data2;
 
-    for (int i = 0; i < 5; i++) 
-    {
-        printf("Compromisso %d:\n", i + 1);
-        printf("Descricao: ");
-        fflush(stdin);
-        fgets(compromissos[i].compromisso, sizeof(compromissos[i].compromisso), stdin);
-        compromissos[i].compromisso[strcspn(compromissos[i].compromisso, "\n")] = '\0';
+    printf("Digite a primeira data (dd/mm/aaaa): ");
+    scanf("%d/%d/%d", &data1.dia, &data1.mes, &data1.ano);
 
-        printf("Data:\n");
-        lerData(&(compromissos[i].data));
+    printf("Digite a segunda data (dd/mm/aaaa): ");
+    scanf("%d/%d/%d", &data2.dia, &data2.mes, &data2.ano);
 
-        printf("\n");
-    }
+    int diasData1 = dataParaDias(data1);
+    int diasData2 = dataParaDias(data2);
+    int diferencaDias = diasData2 - diasData1;
 
-    int mes, ano;
-    int encontrados;
-
-    do 
-    {
-        printf("Digite o mes (0 para sair): ");
-        scanf("%d", &mes);
-
-        if (mes != 0) 
-        {
-            printf("Digite o ano: ");
-            scanf("%d", &ano);
-
-            encontrados = exibirCompromissosMesAno(compromissos, 5, mes, ano);
-        }
-    }
-    while (mes != 0);
+    printf("Número de dias decorridos entre as duas datas: %d\n", diferencaDias);
 
     return 0;
 }
-
-//Exercício 17
 
 
