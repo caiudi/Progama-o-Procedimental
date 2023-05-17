@@ -830,7 +830,8 @@ int main()
             {
                 printf("Dia invalido. \n");
             }
-        }while((Compromissos[i].Data.Dia <= 0) || (Compromissos[i].Data.Dia > 31));
+        }
+        while((Compromissos[i].Data.Dia <= 0) || (Compromissos[i].Data.Dia > 31));
 
         do
         {
@@ -1036,14 +1037,23 @@ int diasNoMes(int mes, int ano)
 {
     int dias;
 
-    if (mes == 2) {
+    if (mes == 2) 
+    {
         if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0)
+        {
             dias = 29;
+        }
         else
+        {
             dias = 28;
-    } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+        }
+    }  
+    if (mes == 4 || mes == 6 || mes == 9 || mes == 11) 
+    {
         dias = 30;
-    } else {
+    } 
+    else 
+    {
         dias = 31;
     }
 
@@ -1076,6 +1086,7 @@ int dataParaDias(dma data)
 int main() 
 {
     dma data1, data2;
+    int diasData1, diasData2, diferencaDias;
 
     printf("Digite a primeira data (dd/mm/aaaa): ");
     scanf("%d/%d/%d", &data1.dia, &data1.mes, &data1.ano);
@@ -1083,9 +1094,9 @@ int main()
     printf("Digite a segunda data (dd/mm/aaaa): ");
     scanf("%d/%d/%d", &data2.dia, &data2.mes, &data2.ano);
 
-    int diasData1 = dataParaDias(data1);
-    int diasData2 = dataParaDias(data2);
-    int diferencaDias = diasData2 - diasData1;
+    diasData1 = dataParaDias(data1);
+    diasData2 = dataParaDias(data2);
+    diferencaDias = diasData2 - diasData1;
 
     printf("Número de dias decorridos entre as duas datas: %d\n", diferencaDias);
 
