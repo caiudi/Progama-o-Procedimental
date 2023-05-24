@@ -98,3 +98,135 @@ int main()
 
 //Exercício 5
 
+#include <stdio.h>
+
+int main()
+{
+    int A, B;
+    int *PA, *PB;
+    int soma;
+
+    printf ("Digite dois valores inteiros: ");
+    scanf ("%i %i", &A, &B);
+
+    PA=&A;
+    PB=&B;
+
+    *PA *= 2;
+    *PB *= 2;
+
+    soma = A + B;
+
+    printf ("A soma do dobro eh: %i", soma);
+    return 0;
+}
+
+//Exercício 6
+
+#include <stdio.h>
+
+int main()
+{
+    int x, y;
+    int *px, *py;
+    int soma, subtracao, multiplicacao, divisao;
+
+    printf ("Digite dois valores inteiros: ");
+    scanf ("%i %i", &x, &y);
+
+    px = &x;
+    py = &y;
+
+    soma = *px + *py;
+    subtracao = *px - *py;
+    multiplicacao = *px * *py;
+    divisao = *px / *py;
+
+    printf ("A soma dos numeros eh: %i\n", soma);
+    printf ("A diferenca dos numeros eh: %i\n", subtracao);
+    printf ("O produto dos numeros eh: %i\n", multiplicacao);
+    printf ("A divisao dos numeros eh: %i\n", divisao);
+
+    return 0;
+}
+
+//Exercício 7
+
+#include <stdio.h>
+
+int main()
+{
+    int x, y, z;
+    int *px, *py, *pz;
+    int comp;
+
+    printf ("Digite tres valores inteiros: ");
+    scanf ("%i %i %i", &x, &y, &z);
+
+    px = &x;
+    py = &y;
+    pz = &z;
+
+     if (*px > *py) 
+    {
+        int temp = *px;
+        *px = *py;
+        *py = temp;
+    }
+
+    if (*py > *pz) 
+    {
+        int temp = *py;
+        *py = *pz;
+        *pz = temp;
+    }
+
+    if (*px > *py) 
+    {
+        int temp = *px;
+        *px = *py;
+        *py = temp;
+    }
+    
+    printf ("Numeros em ordem crescente: %i %i %i\n", *px, *py, *pz);
+    printf ("Enderecos de memoria: %p %p %p\n", px, py, pz);
+    
+    return 0;
+}
+ 
+//Exercício 8
+
+#include <stdio.h>
+
+int main()
+{
+    int vet[6];
+    int *p;
+    int i;
+
+    printf ("Digite 6 numeros inteiros: \n");
+    
+    for (i = 0 ; i < 6 ; i++)
+    {
+        scanf ("%i", &vet[i]);
+    }
+
+    printf ("Valores do vetor:\n");
+    
+    for (i = 0 ; i < 6 ; i++)
+    {
+        printf ("%i ", *(p + i));
+    }
+
+    printf ("Enderecos de memoria: \n");
+    
+    for (i = 0 ; i < 6 ; i++)
+    {
+        printf ("%p\n", (p + i));
+    }
+    
+    return 0;
+}
+
+
+
