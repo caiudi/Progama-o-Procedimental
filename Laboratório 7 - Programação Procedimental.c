@@ -210,6 +210,8 @@ int main()
     {
         scanf ("%i", &vet[i]);
     }
+    
+    p = vet;
 
     printf ("Valores do vetor:\n");
     
