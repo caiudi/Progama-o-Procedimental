@@ -548,6 +548,146 @@ int main()
 
 //Exercício 12
 
+#include <stdio.h>
+#include <string.h>
+
+typedef struct 
+{
+    int codigo;
+    char nome[51];
+    int quantidade;
+    float preco;
+} Produto;
+
+int main() 
+{
+    int N;
+    int indiceMaiorPreco = 0;
+    int indiceMaiorQuantidade = 0;
+    Produto produtos[100];
+    
+    printf("Informe a quantidade de produtos: ");
+    scanf("%d", &N);
+
+    for (int i = 0; i < N; i++) 
+    {
+        printf("Produto %d:\n", i + 1);
+
+        printf("Código: ");
+        scanf("%d", &produtos[i].codigo);
+
+        printf("Nome: ");
+        fflush(stdin);
+        fgets(produtos[i].nome, 51, stdin);
+        produtos[i].nome[strcspn(produtos[i].nome, "\n")] = '\0'; 
+
+        printf("Quantidade: ");
+        scanf("%d", &produtos[i].quantidade);
+
+        printf("Preço: ");
+        scanf("%f", &produtos[i].preco);
+
+        printf("\n");
+    }
+    
+    for (int i = 1; i < N; i++) 
+    {
+        if (produtos[i].preco > produtos[indiceMaiorPreco].preco) 
+        {
+            indiceMaiorPreco = i;
+        }
+    }
+
+    for (int i = 1; i < N; i++) 
+    {
+        if (produtos[i].quantidade > produtos[indiceMaiorQuantidade].quantidade) 
+        {
+            indiceMaiorQuantidade = i;
+        }
+    }
+
+    printf("Produto com o maior preço de venda:\n");
+    printf("Codigo: %d\n", produtos[indiceMaiorPreco].codigo);
+    printf("Nome: %s\n", produtos[indiceMaiorPreco].nome);
+    printf("Quantidade: %d\n", produtos[indiceMaiorPreco].quantidade);
+    printf("Preco: %.2f\n\n", produtos[indiceMaiorPreco].preco);
+
+    printf("Produto com a maior quantidade disponivel no estoque:\n");
+    printf("Codigo: %d\n", produtos[indiceMaiorQuantidade].codigo);
+    printf("Nome: %s\n", produtos[indiceMaiorQuantidade].nome);
+    printf("Quantidade: %d\n", produtos[indiceMaiorQuantidade].quantidade);
+    printf("Preco: %.2f\n", produtos[indiceMaiorQuantidade].preco);
+
+    return 0;
+}
+
+//Exercício 13
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int linhas, colunas;
+    int valor;
+    int **matriz = (int **)malloc(linhas * sizeof(int *));
+    int encontrado = 0;
+
+    printf("Digite o número de linhas da matriz: ");
+    scanf("%d", &linhas);
+
+    printf("Digite o número de colunas da matriz: ");
+    scanf("%d", &colunas);
+
+    int **matriz = (int **)malloc(linhas * sizeof(int *));
+    for (int i = 0; i < linhas; i++) 
+    {
+        matriz[i] = (int *)malloc(colunas * sizeof(int));
+    }
+
+    printf("Digite os elementos da matriz:\n");
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    printf("Digite o valor a ser buscado na matriz: ");
+    scanf("%d", &valor);
+
+    for (int i = 0; i < linhas; i++) 
+    {
+        for (int j = 0; j < colunas; j++) 
+        {
+            if (matriz[i][j] == valor) 
+            {
+                encontrado = 1;
+                break;
+            }
+        }
+        if (encontrado) 
+        {
+            break;
+        }
+    }
+
+    if (encontrado) 
+    {
+        printf("O valor %d está presente na matriz.\n", valor);
+    }
+    else 
+    {
+        printf("O valor %d nao esta presente na matriz.\n", valor);
+    }
+
+    for (int i = 0; i < linhas; i++) 
+    {
+        free(matriz[i]);
+    }
+    free(matriz);
+
+    return 0;
+}
 
 
 
