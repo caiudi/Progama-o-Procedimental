@@ -293,6 +293,60 @@ int main()
     return 0;
 }
 
+//Exercício 7 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int numeros_sorteados[6];
+    int numeros_bilhete[6];
+    int numeros_corretos[6];
+    int quantidade_corretos = 0;
+    
+    printf("Digite os numeros sorteados: ");
+    for (int i = 0; i < 6; i++)
+    {
+        scanf("%d", &numeros_sorteados[i]);
+    }
+    
+    printf("Digite os numeros do seu bilhete: ");
+    for (int i = 0; i < 6; i++) 
+    {
+        scanf("%d", &numeros_bilhete[i]);
+    }
+    
+    for (int i = 0; i < 6; i++) 
+    {
+        for (int j = 0; j < 6; j++) 
+        {
+            if (numerosBilhete[i] == numeros_sorteados[j]) 
+            {
+                numeros_corretos[quantidade_corretos] = numeros_bilhete[i];
+                quantidade_corretos++;
+                break;
+            }
+        }
+    }
+    
+    printf("\nNumeros sorteados: ");
+    for (int i = 0; i < 6; i++) 
+    {
+        printf("%d ", numeros_sorteados[i]);
+    }
+    
+    printf("\nNumeros corretos: ");
+    for (int i = 0; i < quantidade_corretos; i++) 
+    {
+        printf("%d ", numeros_corretos[i]);
+    }
+    
+    printf("\n");
+    
+    return 0;
+}
+
 
 
 
