@@ -321,7 +321,7 @@ int main()
     {
         for (int j = 0; j < 6; j++) 
         {
-            if (numerosBilhete[i] == numeros_sorteados[j]) 
+            if (numeros_bilhete[i] == numeros_sorteados[j]) 
             {
                 numeros_corretos[quantidade_corretos] = numeros_bilhete[i];
                 quantidade_corretos++;
@@ -346,6 +346,209 @@ int main()
     
     return 0;
 }
+
+//Exercício 8
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int *vetor, zeros = 0;
+    vetor = (int *)calloc(1500, sizeof(int));
+
+    if (vetor == NULL) 
+    {
+        printf("Erro na alocacao de memoria.\n");
+        return 1;
+    }
+
+    for (int i = 0; i < 1500; i++) 
+    {
+        if (vetor[i] == 0)
+        {
+            zeros++;
+        }
+    }
+    printf("O vetor contem %d valores inicializados com zero.\n", zeros);
+
+    for (int i = 0; i < 1500; i++) 
+    {
+        vetor[i] = i;
+    }
+
+    printf("\nOs 10 primeiros elementos do vetor sao:\n");
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%d ", vetor[i]);
+    }
+    
+    printf("\n\nOs 10 ultimos elementos do vetor sao:\n");
+    for (int i = 1490; i < 1500; i++) 
+    {
+        printf("%d ", vetor[i]);
+    }
+
+    printf("\n");
+
+    free(vetor);
+
+    return 0;
+}
+
+//Exercício 9
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int *vetor = NULL;
+    int tamanho = 0;
+    int numero;
+    int quantidade_numeros = 0; 
+
+    do 
+    {
+        printf("Digite um numero: ");
+        scanf("%d", &numero);
+
+        if (numero >= 0) 
+        {
+            tamanho++;
+            
+            vetor = (int *)realloc(vetor, tamanho * sizeof(int));
+            
+            if (vetor == NULL) {
+                printf("Erro na alocacao de memoria.\n");
+                return 1; 
+            }
+
+            vetor[tamanho - 1] = numero;
+            
+            quantidade_numeros++;
+        }
+    } 
+    while (numero >= 0);
+
+    printf("\nVetor lido:\n");
+    
+    for (int i = 0; i < quantidade_numeros; i++) 
+    {
+        printf("%d ", vetor[i]);
+    }
+    printf("\n");
+
+    free(vetor);
+
+    return 0;
+}
+
+//Exercício 10
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() 
+{
+    int quantidade;
+    double *vetor;
+    vetor = (double *)malloc(quantidade * sizeof(double));
+
+    if (vetor == NULL) {
+        printf("Erro na alocação de memoria.\n");
+        return 1;
+    }
+    
+    printf("Quantos valores deseja armazenar (no mínimo 10): ");
+    scanf("%d", &quantidade);
+    
+    if (quantidade < 10) 
+    {
+        printf("A quantidade mínima deve ser 10.\n");
+        return 1;
+    }
+
+    srand(time(NULL));
+    
+    for (int i = 0; i < 10; i++) 
+    {
+        vetor[i] = (double)(rand() % 101); 
+    }
+    
+    printf("\nValores armazenados nos 10 primeiros elementos do vetor:\n");
+    
+    for (int i = 0; i < 10; i++) 
+    {
+        printf("%.2lf ", vetor[i]);
+    }
+    printf("\n");
+    
+    free(vetor);
+    
+    return 0;
+}
+
+//Exercício 11
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct 
+{
+    int matricula;
+    char sobrenome[50];
+    int anoNascimento;
+} Aluno;
+
+int main() 
+{
+    int numero_alunos;
+    Aluno *alunos;
+    
+    printf("Informe o numero de alunos a serem cadastrados: ");
+    scanf("%d", &numero_alunos);
+
+    alunos = (Aluno *)malloc(numAlunos * sizeof(Aluno));
+    
+    if (alunos == NULL) {
+        printf("Erro na alocacao de memoria.\n");
+        return 1;
+    }
+    
+    for (int i = 0; i < numero_alunos; i++) 
+    {
+        printf("\nAluno %d:\n", i + 1);
+        
+        printf("Matricula: ");
+        scanf("%d", &alunos[i].matricula);
+        
+        printf("Sobrenome: ");
+        scanf("%s", alunos[i].sobrenome);
+        
+        printf("Ano de Nascimento: ");
+        scanf("%d", &alunos[i].anoNascimento);
+    }
+    
+    printf("\nDados dos alunos cadastrados:\n");
+    
+    for (int i = 0; i < numero_alunos; i++) {
+        printf("\nAluno %d:\n", i + 1);
+        
+        printf("Matricula: %d\n", alunos[i].matricula);
+        printf("Sobrenome: %s\n", alunos[i].sobrenome);
+        printf("Ano de Nascimento: %d\n", alunos[i].anoNascimento);
+    }
+    
+    free(alunos);
+    
+    return 0;
+}
+
+//Exercício 12
+
+
 
 
 
